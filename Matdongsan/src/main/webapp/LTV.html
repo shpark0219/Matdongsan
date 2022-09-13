@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="/js/jquery-3.6.0.min.js"></script>   
-    <style>
-        .capture-media {position:relative;}
-        .capture-media .spinner-grow {position:relative; position: absolute; left: 27px; top: 15px; display:none;}
-        @media (max-width: 500px) {
-            .saveButtons .btn {
-              padding: .4rem .65rem !important;
-              letter-spacing: -0.1rem;
-            }
-        } 
-        
-        .hiding {
-            display: none;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Untree.co">
+<link rel="shortcut icon" href="favicon.png">
+
+<meta name="description" content="" />
+<meta name="keywords" content="bootstrap, bootstrap5" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+	rel="stylesheet">
+
+
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+<link rel="stylesheet" href="css/tiny-slider.css">
+<link rel="stylesheet" href="css/aos.css">
+<link rel="stylesheet" href="css/style.css">
+
+<title>Property &mdash; Free Bootstrap 5 Website Template by
+	Untree.co</title>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<style>
+.capture-media {
+	position: relative;
+}
+
+.capture-media .spinner-grow {
+	position: relative;
+	position: absolute;
+	left: 27px;
+	top: 15px;
+	
+}
+
+@media ( max-width : 500px) {
+	.saveButtons .btn {
+		padding: .4rem .65rem !important;
+		letter-spacing: -0.1rem;
+	}
+}
+
+.hiding {
+	display: none;
+}
+</style>
 </head>
-<body>    
-    <div id="contents">				
+<body>
+	<div id="contents" class="container">
 		<!-- <form id="form_commission" class="form-horizontal form-group-lg">
 		<input type="hidden" id="areaType" name="areaType" value="seoul">
 		<input type="hidden" id="realEstateType" name="realEstateType" value="house">
@@ -30,300 +59,332 @@
 			<div class="col-12">
 				<div id="rd" class="custom-control custom-checkbox mb-2 mr-3 d-inline-block">
 					<input type="checkbox" class="cuscon-input" name="roomDeduct" value="Y" id="roomDeduct" checked="">
-					<label class="custom-control-label" for="roomDeduct">ë°© ê³µì œ</label>
+					<label class="custom-control-label" for="roomDeduct">¹æ °øÁ¦</label>
 					<i class="small fas fa-question-circle click" data-toggle="modal" data-target="#roomDeductInfoModal" aria-hidden="true"></i>
 				</div>
 				<div id="onls" class="custom-control custom-checkbox mb-2 mr-3 d-inline-block" display="inline-block">
 					<input type="checkbox" class="cuscon-input" name="onLease" value="Y" id="onLease" >
-					<label class="custom-control-label" for="onLease">ì„ëŒ€ ì¤‘</label>
+					<label class="custom-control-label" for="onLease">ÀÓ´ë Áß</label>
 				</div>
 				<div id="onlv" class="custom-control custom-checkbox mb-2 mr-3 roomGroup primary livingGroup d-inline-block" display="inline-block">
 					<input type="checkbox" class="cuscon-input" name="onLiving" value="Y" id="onLiving" >
-					<label class="custom-control-label" for="onLiving">ê±°ì£¼ ì¤‘</label>
+					<label class="custom-control-label" for="onLiving">°ÅÁÖ Áß</label>
 				</div>
 			</div>
 			<div class="col-12 roomGroup primary">
 				<div id="pd" class="custom-control custom-checkbox mb-2 mr-3 d-inline-block">
 					<input type="checkbox" class="cuscon-input" id="customPriorityDeposit">
-					<label class="custom-control-label" for="customPriorityDeposit">ì†Œì•¡ë³´ì¦ê¸ˆ ì§ì ‘ì…ë ¥</label>
+					<label class="custom-control-label" for="customPriorityDeposit">¼Ò¾×º¸Áõ±İ Á÷Á¢ÀÔ·Â</label>
 				</div>
 			</div> -->
-			<div class="col-md-6 mb-3">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">ëŒ€ì¶œê¸ˆì•¡</span>
-					</div>
-					<input type="number" class="form-control number-helper" id="amount" name="amount" placeholder="ëŒ€ì¶œ í¬ë§ê¸ˆì•¡" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ë§Œì›</span>
-					</div>
+		<div class="col-md-6 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">´ëÃâ±İ¾×</span>
 				</div>
-			</div>
-			<div class="col-md-6 mb-3">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">ë‹´ë³´ê°€ì¹˜</span>
-					</div>
-					<input type="number" class="form-control number-helper" id="price" name="price" placeholder="í‰ê·  ì‹œì„¸(ê°ì •ê°€)" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ë§Œì›</span>
-					</div>
+				<input type="number" class="form-control number-helper" id="amount"
+					name="amount" placeholder="´ëÃâ Èñ¸Á±İ¾×" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">¸¸¿ø</span>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-6 mb-3">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">
-							ì„ ìˆœìœ„ì±„ê¶Œ&nbsp;
-							<i class="fas fa-question-circle small" data-toggle="tooltip" data-placement="top" title="" aria-hidden="true" data-original-title="ê¸°ì¡´ ëŒ€ì¶œ ë“±ì´ ìˆëŠ” ê²½ìš°. ê·¼ì €ë‹¹ì€ ì±„ê¶Œìµœê³ ì•¡ ê¸°ì¤€ìœ¼ë¡œ ì…ë ¥"></i><span class="sr-only">ê¸°ì¡´ ëŒ€ì¶œ ë“±ì´ ìˆëŠ” ê²½ìš°. ê·¼ì €ë‹¹ì€ ì±„ê¶Œìµœê³ ì•¡ ê¸°ì¤€ìœ¼ë¡œ ì…ë ¥</span>
-						</span>
-					</div>
-					<input type="number" class="form-control number-helper" id="seniorBond" name="seniorBond" placeholder="ì„ ìˆœìœ„ ëŒ€ì¶œ ë“±" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ë§Œì›</span>
-					</div>
+		<div class="col-md-6 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">´ãº¸°¡Ä¡</span>
 				</div>
-			</div>
-			<div class="col-md-6 mb-3 leaseGroup d-none">
-				<div id="dpi" class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">ì„ì°¨ë³´ì¦ê¸ˆ</span>
-					</div>
-					<input type="number" class="form-control number-helper" id="deposit" name="deposit" placeholder="ì „ì›”ì„¸ì˜ ë³´ì¦ê¸ˆ" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ë§Œì›</span>
-					</div>
+				<input type="number" class="form-control number-helper" id="price"
+					name="price" placeholder="Æò±Õ ½Ã¼¼(°¨Á¤°¡)" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">¸¸¿ø</span>
 				</div>
-			</div>
-			<div class="col-md-6 mb-3 priorityDepositGroup roomGroup d-none">
-				<div id="pd2" class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">ì†Œì•¡ë³´ì¦ê¸ˆ</span>
-					</div>
-					<input type="number" class="form-control" id="priorityDeposit" name="priorityDeposit" placeholder="ë¯¸ì…ë ¥ ì‹œ ê¸°ë³¸ê°’" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ë§Œì›</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 mb-3 roomGroup primary">
-				<div id="rnum" class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">ë°© ìˆ˜</span>
-					</div>
-					<input type="number" class="form-control" id="room" name="room" placeholder="ì†Œì•¡ë³´ì¦ê¸ˆ ê³„ì‚°ìš©" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ê°œ</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 mb-3 leaseGroup roomGroup d-none">
-				<div id="lr" class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text">ì„ëŒ€ ë°© ìˆ˜</span>
-					</div>
-					<input type="number" class="form-control" id="leaseRoom" name="leaseRoom" placeholder="ì†Œì•¡ë³´ì¦ê¸ˆ ê³„ì‚°ìš©" value="">
-					<div class="input-group-append">
-						<span class="input-group-text">ê°œ</span>
-					</div>
-				</div>
-			</div>
-				
-			<div class="col-md-8 nocap">
-				<!--<ns-->
-				<button id="submit" type="button" class="btn btn btn-primary">
-					<i class="fas fa-calculator" aria-hidden="true"></i> LTVê³„ì‚°
-				</button>				
-				<!--ns>-->
 			</div>
 		</div>
-		</form>
-	
-    <div class="hiding">
-        <div class="mt-4">
-            <div class="d-inline mr-3 h4 font-weight-bold">ê³„ì‚° ê²°ê³¼</div> 
-            <div class="custom-control custom-checkbox mb-3 d-inline ml-2 nocap">
-                <input type="checkbox" id="number" class="custom-control-input" checked="">
-                <label class="custom-control-label" for="number">ìˆœë²ˆ</label>
-            </div>
-                <!--
+	</div>
+	<div class="row">
+		<div class="col-md-6 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> ¼±¼øÀ§Ã¤±Ç&nbsp; <i
+						class="fas fa-question-circle small" data-toggle="tooltip"
+						data-placement="top" title="" aria-hidden="true"
+						data-original-title="±âÁ¸ ´ëÃâ µîÀÌ ÀÖ´Â °æ¿ì. ±ÙÀú´çÀº Ã¤±ÇÃÖ°í¾× ±âÁØÀ¸·Î ÀÔ·Â"></i><span
+						class="sr-only">±âÁ¸ ´ëÃâ µîÀÌ ÀÖ´Â °æ¿ì. ±ÙÀú´çÀº Ã¤±ÇÃÖ°í¾× ±âÁØÀ¸·Î ÀÔ·Â</span>
+					</span>
+				</div>
+				<input type="number" class="form-control number-helper"
+					id="seniorBond" name="seniorBond" placeholder="¼±¼øÀ§ ´ëÃâ µî" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">¸¸¿ø</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 mb-3 leaseGroup d-none">
+			<div id="dpi" class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">ÀÓÂ÷º¸Áõ±İ</span>
+				</div>
+				<input type="number" class="form-control number-helper" id="deposit"
+					name="deposit" placeholder="Àü¿ù¼¼ÀÇ º¸Áõ±İ" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">¸¸¿ø</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 mb-3 priorityDepositGroup roomGroup d-none">
+			<div id="pd2" class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">¼Ò¾×º¸Áõ±İ</span>
+				</div>
+				<input type="number" class="form-control" id="priorityDeposit"
+					name="priorityDeposit" placeholder="¹ÌÀÔ·Â ½Ã ±âº»°ª" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">¸¸¿ø</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 mb-3 roomGroup primary">
+			<div id="rnum" class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">¹æ ¼ö</span>
+				</div>
+				<input type="number" class="form-control" id="room" name="room"
+					placeholder="¼Ò¾×º¸Áõ±İ °è»ê¿ë" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">°³</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 mb-3 leaseGroup roomGroup d-none">
+			<div id="lr" class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">ÀÓ´ë ¹æ ¼ö</span>
+				</div>
+				<input type="number" class="form-control" id="leaseRoom"
+					name="leaseRoom" placeholder="¼Ò¾×º¸Áõ±İ °è»ê¿ë" value="">
+				<div class="input-group-append">
+					<span class="input-group-text">°³</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-8 nocap">
+			<!--<ns-->
+			<button id="submit" type="button" class="btn btn btn-primary">
+				<i class="fas fa-calculator" aria-hidden="true"></i> LTV°è»ê
+			</button>
+			<!--ns>-->
+		</div>
+	</div>
+	</form>
+
+	<div class="hiding">
+		<div class="mt-4">
+			<div class="d-inline mr-3 h4 font-weight-bold">°è»ê °á°ú</div>
+			<div class="custom-control custom-checkbox mb-3 d-inline ml-2 nocap">
+				<input type="checkbox" id="number" class="custom-control-input"
+					checked=""> <label class="custom-control-label"
+					for="number">¼ø¹ø</label>
+			</div>
+			<!--
                 <div class="custom-control custom-checkbox mb-3 d-inline mx-1">
                 <input type="checkbox" id="dscp" class="custom-control-input" onchange="hideCol('table',4)" checked>
-                <label class="custom-control-label" for="dscp">ë¹„ê³ </label>
+                <label class="custom-control-label" for="dscp">ºñ°í</label>
                 -->
-        </div>
-        <hr>
-        <div id="resultSet" style="overflow-x: auto; white-space: nowrap;">
-            <div class="hiding">                
-                <hr>
-                <div id="resultSet" style="overflow-x: auto; white-space: nowrap;">
-                    <div id="result1" class="result pr-4">
-                        <!-- íƒœê·¸ë“¤ì–´ê°ˆë¶€ë¶„ -->
-                        
-                    <div class="page-header mb-2"><span class="h5">ê³„ì‚°ì„œ 1</span>&nbsp;
-                        <i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;
-                        <i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i>
-                    </div>
-                        <table id="tb" class="table table-bordered tlf mb-4">
-                            <thead>
-                                <tr>
-                                    <th class="listn">#</th>
-                                    <th>ì ìš”</th>
-                                    <th>ê¸ˆì•¡</th>
-                                    <th class="dpLg">ë¹„ê³ </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="listn">1</td>
-                                    <td class="ì ìš”">ëŒ€ì¶œê¸ˆì•¡<div class="dpSm text-muted small">ì…ë ¥ê°’</div></td>
-                                    <td class="ê¸ˆì•¡"></td>
-                                    <td class="ë¹„ê³  dpLg">ì…ë ¥ê°’</td>
-                                </tr>
-                                <tr>
-                                    <td class="listn">2</td>
-                                    <td class="ì ìš”">ë‹´ë³´ê°€ì¹˜<div class="dpSm text-muted small">ì…ë ¥ê°’</div></td>
-                                    <td class="ê¸ˆì•¡"></td>
-                                    <td class="ë¹„ê³  dpLg">ì…ë ¥ê°’</td>
-                                </tr>
-                                <tr>
-                                    <td class="listn">3</td>
-                                    <td class="ì ìš”">ì†Œì•¡ë³´ì¦ê¸ˆ<div class="dpSm text-muted small">ì§€ì—­ë³„ ì†Œì•¡ë³´ì¦ê¸ˆ ì ìš©(í•˜ë‹¨ ì°¸ì¡°)</div></td>
-                                    <td class="ê¸ˆì•¡"></td>
-                                    <td class="ë¹„ê³  dpLg">ì§€ì—­ë³„ ì†Œì•¡ë³´ì¦ê¸ˆ ì ìš©(í•˜ë‹¨ ì°¸ì¡°)</td>
-                                </tr>
-                                <tr>
-                                    <td class="listn">4</td>
-                                    <td class="ì ìš”">ìµœìš°ì„ ë³€ì œê¸ˆì•¡<div class="dpSm text-muted small">ì ìš© ë°©ìˆ˜(0) Ã— 0ì›</div></td>
-                                    <td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì ìš© ë°©ìˆ˜(0) Ã— 0ì›</td>
-                                </tr>
-                                <tr>
-                                    <td class="listn">5</td>
-                                    <td class="ì ìš”">ëŒ€ì¶œê¸ˆì•¡ ë“±<div class="dpSm text-muted small">ëŒ€ì¶œê¸ˆ + ë³´ì¦ê¸ˆ + ì„ ìˆœìœ„ì±„ê¶Œ ë“±</div></td>
-                                    <td class="ê¸ˆì•¡"></td>
-                                    <td class="ë¹„ê³  dpLg">ëŒ€ì¶œê¸ˆ + ë³´ì¦ê¸ˆ + ì„ ìˆœìœ„ì±„ê¶Œ ë“±</td>
-                                </tr>
-                                <tr style="background-color:#eeefff; font-weight:bold">
-                                    <td class="listn">6</td>
-                                    <td class="ì ìš”">LTV<div class="dpSm text-muted small">ëŒ€ì¶œê¸ˆì•¡ ë“± / ë‹´ë³´ê°€ì¹˜ Ã— 100</div></td>
-                                    <td class="ê¸ˆì•¡">%</td>
-                                    <td class="ë¹„ê³  dpLg">ëŒ€ì¶œê¸ˆì•¡ ë“± / ë‹´ë³´ê°€ì¹˜ Ã— 100</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div> 
-            </div>
-        </div>           
-                
-                    <!--ns>-->
-                <div class="hiding" style="display: block;">
-                    
-                    <div id="basisWrap" class="p-3 my-3 alert-info rounded">
-                        <h5>ê³„ì‚°ê²°ê³¼ í•´ì„¤</h5>
-                        <span id="basis"><p>ëŒ€ëµì ì¸ ì§€ì—­ êµ¬ë¶„ì„ í†µí•´ ì†Œì•¡ì„ì°¨ë³´ì¦ê¸ˆì„ ê³„ì‚°í•˜ì˜€ìŠµë‹ˆë‹¤. êµ¬, êµ°, ë™ì— ë”°ë¼ ë‹¤ë¥¼ ìˆ˜ë„ ìˆìœ¼ë‹ˆ ì•„ë˜ ì§€ì—­ë³„ ì†Œì•¡ì„ì°¨ë³´ì¦ê¸ˆ í‘œë¥¼ ë³´ê³  ë¶€ì •í™•í•œ ê²½ìš° ì†Œì•¡ì„ì°¨ë³´ì¦ê¸ˆì„ ì§ì ‘ ì…ë ¥í•´ì£¼ì„¸ìš”.</p><p>ë°© ê³µì œëŠ” ê¸ˆìœµê°ë…ì›ì˜ ì€í–‰ì—…ê°ë…ì—…ë¬´ì‹œí–‰ì„¸ì¹™ì— ë”°ë¼ ê³„ì‚°ë˜ì—ˆìŠµë‹ˆë‹¤. ì€í–‰ì´ ì„ íƒì ìœ¼ë¡œ ì ìš©í•  ìˆ˜ ìˆëŠ” ê·œì •ì˜ ê²½ìš° ëŒ€ì¶œ ê°€ëŠ¥ì•¡ì´ ìµœëŒ€í•œìœ¼ë¡œ ë‚˜ì˜¤ëŠ” ê¸°ì¤€ì„ ì ìš©í•˜ì—¬ ê³„ì‚°í•˜ì˜€ìŠµë‹ˆë‹¤. ìƒì„¸í•œ ë‚´ìš©ì€ <a href="/wiki/ë°©_ê³µì œ">ìœ„í‚¤ - ë°©ê³µì œ</a><a href="/wiki/ë°©_ê³µì œ" target="_blank"><sup><i class="far fa-window-restore" title="ìƒˆì°½ì—´ê¸°" aria-hidden="true"></i><span class="sr-only">ìƒˆì°½ì—´ê¸°</span></sup></a>ë¥¼ ì°¸ê³ í•˜ì„¸ìš”.</p><p>ê¸°ì¡´ ëŒ€ì¶œ, ì„ ìˆœìœ„ì±„ê¶Œ, ì„ì°¨ë³´ì¦ê¸ˆ, ì†Œì•¡ë³´ì¦ê¸ˆ ë“±ì´ ì°¨ê°ë˜ì§€ ì•Šì€ ì˜¨ì „í•œ ë‹´ë³´ê°€ì¹˜ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ê³„ì‚°ë˜ì—ˆìŠµë‹ˆë‹¤. í•´ë‹¹í•˜ëŠ” ì‚¬í•­ì´ ì „í˜€ ì—†ëŠ”ì§€ ë‹¤ì‹œ í•œë²ˆ í™•ì¸í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.</p></span>
-                    </div>
-                </div>
-            </div>
-        
-</div>
+		</div>
+		<hr>
+		<div id="resultSet" style="overflow-x: auto; white-space: nowrap;">
+			<div class="hiding">
+				<hr>
+				<div id="resultSet" style="overflow-x: auto; white-space: nowrap;">
+					<div id="result1" class="result pr-4">
+						<!-- ÅÂ±×µé¾î°¥ºÎºĞ -->
 
-<script>
-    
-    // $('#submit').on('click',function(){
-    //     $('.hiding').css('display','block');
-    //     $('#addSubmit').css('display','block');
-    //     $('#resetSubmit').css('display','block');
-    //     let table3 = '<div class="page-header mb-2"><span class="h5">ê³„ì‚°ì„œ 1</span><i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i></div><table id="tb" class="table table-bordered tlf mb-4"><thead><tr><th class="listn">#</th><th>ì ìš”</th><th>ê¸ˆì•¡</th><th class="dpLg">ë¹„ê³ </th></tr></thead><tbody><tr><td class="listn">1</td><td class="ì ìš”">ëŒ€ì¶œê¸ˆì•¡<div class="dpSm text-muted small">ì…ë ¥ê°’</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì…ë ¥ê°’</td></tr><tr><td class="listn">2</td><td class="ì ìš”">ë‹´ë³´ê°€ì¹˜<div class="dpSm text-muted small">ì…ë ¥ê°’</div></td><td class="ê¸ˆì•¡"></td> <td class="ë¹„ê³  dpLg">ì…ë ¥ê°’</td></tr><tr><td class="listn">3</td><td class="ì ìš”">ì†Œì•¡ë³´ì¦ê¸ˆ<div class="dpSm text-muted small">ì§€ì—­ë³„ ì†Œì•¡ë³´ì¦ê¸ˆ ì ìš©(í•˜ë‹¨ ì°¸ì¡°)</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì§€ì—­ë³„ ì†Œì•¡ë³´ì¦ê¸ˆ ì ìš©(í•˜ë‹¨ ì°¸ì¡°)</td></tr> <tr><td class="listn">4</td><td class="ì ìš”">ìµœìš°ì„ ë³€ì œê¸ˆì•¡<div class="dpSm text-muted small">ì ìš© ë°©ìˆ˜(0) Ã— 0ì›</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì ìš© ë°©ìˆ˜(0) Ã— 0ì›</td></tr><tr><td class="listn">5</td><td class="ì ìš”">ëŒ€ì¶œê¸ˆì•¡ ë“±<div class="dpSm text-muted small">ëŒ€ì¶œê¸ˆ + ë³´ì¦ê¸ˆ + ì„ ìˆœìœ„ì±„ê¶Œ ë“±</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ëŒ€ì¶œê¸ˆ + ë³´ì¦ê¸ˆ + ì„ ìˆœìœ„ì±„ê¶Œ ë“±</td></tr><tr style="background-color:#eeefff; font-weight:bold"><td class="listn">6</td><td class="ì ìš”">LTV<div class="dpSm text-muted small">ëŒ€ì¶œê¸ˆì•¡ ë“± / ë‹´ë³´ê°€ì¹˜ Ã— 100</div></td><td class="ê¸ˆì•¡">%</td><td class="ë¹„ê³  dpLg">ëŒ€ì¶œê¸ˆì•¡ ë“± / ë‹´ë³´ê°€ì¹˜ Ã— 100</td></tr></tbody></table>';
-    //     $('#result1').show(table3);
-    // });
+						<div class="page-header mb-2">
+							<span class="h5">°è»ê¼­ 1</span>&nbsp; <i class="far fa-copy click"
+								onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp; <i
+								class="fas fa-file-csv click" onclick="downloadCsv(this)"
+								aria-hidden="true"></i>
+						</div>
+						<table id="tb" class="table table-bordered tlf mb-4">
+							<thead>
+								<tr>
+									<th class="listn">#</th>
+									<th>Àû¿ä</th>
+									<th>±İ¾×</th>
+									<th class="dpLg">ºñ°í</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="listn">1</td>
+									<td class="Àû¿ä">´ëÃâ±İ¾×
+										<div class="dpSm text-muted small">ÀÔ·Â°ª</div>
+									</td>
+									<td class="±İ¾×"></td>
+									<td class="ºñ°í dpLg">ÀÔ·Â°ª</td>
+								</tr>
+								<tr>
+									<td class="listn">2</td>
+									<td class="Àû¿ä">´ãº¸°¡Ä¡
+										<div class="dpSm text-muted small">ÀÔ·Â°ª</div>
+									</td>
+									<td class="±İ¾×"></td>
+									<td class="ºñ°í dpLg">ÀÔ·Â°ª</td>
+								</tr>
+								<tr>
+									<td class="listn">3</td>
+									<td class="Àû¿ä">¼Ò¾×º¸Áõ±İ
+										<div class="dpSm text-muted small">Áö¿ªº° ¼Ò¾×º¸Áõ±İ Àû¿ë(ÇÏ´Ü ÂüÁ¶)</div>
+									</td>
+									<td class="±İ¾×"></td>
+									<td class="ºñ°í dpLg">Áö¿ªº° ¼Ò¾×º¸Áõ±İ Àû¿ë(ÇÏ´Ü ÂüÁ¶)</td>
+								</tr>
+								<tr>
+									<td class="listn">4</td>
+									<td class="Àû¿ä">ÃÖ¿ì¼±º¯Á¦±İ¾×
+										<div class="dpSm text-muted small">Àû¿ë ¹æ¼ö(0) ¡¿ 0¿ø</div>
+									</td>
+									<td class="±İ¾×"></td>
+									<td class="ºñ°í dpLg">Àû¿ë ¹æ¼ö(0) ¡¿ 0¿ø</td>
+								</tr>
+								<tr>
+									<td class="listn">5</td>
+									<td class="Àû¿ä">´ëÃâ±İ¾× µî
+										<div class="dpSm text-muted small">´ëÃâ±İ + º¸Áõ±İ + ¼±¼øÀ§Ã¤±Ç µî</div>
+									</td>
+									<td class="±İ¾×"></td>
+									<td class="ºñ°í dpLg">´ëÃâ±İ + º¸Áõ±İ + ¼±¼øÀ§Ã¤±Ç µî</td>
+								</tr>
+								<tr style="background-color: #eeefff; font-weight: bold">
+									<td class="listn">6</td>
+									<td class="Àû¿ä">LTV
+										<div class="dpSm text-muted small">´ëÃâ±İ¾× µî / ´ãº¸°¡Ä¡ ¡¿ 100</div>
+									</td>
+									<td class="±İ¾×">%</td>
+									<td class="ºñ°í dpLg">´ëÃâ±İ¾× µî / ´ãº¸°¡Ä¡ ¡¿ 100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    $('#submit').on('click',function(){
-        $('.hiding').css('display','block');
-        // $('#addSubmit').css('display','block');
-        // $('#resetSubmit').css('display','block');
-    });
-    
-    
-    // console.log(table);
-    // let table2 = $('.h5').text();
-    // console.log(table2);        
-    
-    // $('.h5').text('ê³„ì‚°ì„œ'+cnt); 
-    // let cnt = 1;
-    
-         
-    // let table = $('#result1').html();
-    // var n = 2;
-    // // var n = parseInt($('.h5').text().replace(/[^0-9]/g,''));
-    
-    // $('#addSubmit').on('click',function(){
-    //     let table2 = '<div class="page-header mb-2"><span class="h5">ê³„ì‚°ì„œ '+n+'</span><i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i></div><table id="tb" class="table table-bordered tlf mb-4"><thead><tr><th class="listn">#</th><th>ì ìš”</th><th>ê¸ˆì•¡</th><th class="dpLg">ë¹„ê³ </th></tr></thead><tbody><tr><td class="listn">1</td><td class="ì ìš”">ëŒ€ì¶œê¸ˆì•¡<div class="dpSm text-muted small">ì…ë ¥ê°’</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì…ë ¥ê°’</td></tr><tr><td class="listn">2</td><td class="ì ìš”">ë‹´ë³´ê°€ì¹˜<div class="dpSm text-muted small">ì…ë ¥ê°’</div></td><td class="ê¸ˆì•¡"></td> <td class="ë¹„ê³  dpLg">ì…ë ¥ê°’</td></tr><tr><td class="listn">3</td><td class="ì ìš”">ì†Œì•¡ë³´ì¦ê¸ˆ<div class="dpSm text-muted small">ì§€ì—­ë³„ ì†Œì•¡ë³´ì¦ê¸ˆ ì ìš©(í•˜ë‹¨ ì°¸ì¡°)</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì§€ì—­ë³„ ì†Œì•¡ë³´ì¦ê¸ˆ ì ìš©(í•˜ë‹¨ ì°¸ì¡°)</td></tr> <tr><td class="listn">4</td><td class="ì ìš”">ìµœìš°ì„ ë³€ì œê¸ˆì•¡<div class="dpSm text-muted small">ì ìš© ë°©ìˆ˜(0) Ã— 0ì›</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ì ìš© ë°©ìˆ˜(0) Ã— 0ì›</td></tr><tr><td class="listn">5</td><td class="ì ìš”">ëŒ€ì¶œê¸ˆì•¡ ë“±<div class="dpSm text-muted small">ëŒ€ì¶œê¸ˆ + ë³´ì¦ê¸ˆ + ì„ ìˆœìœ„ì±„ê¶Œ ë“±</div></td><td class="ê¸ˆì•¡"></td><td class="ë¹„ê³  dpLg">ëŒ€ì¶œê¸ˆ + ë³´ì¦ê¸ˆ + ì„ ìˆœìœ„ì±„ê¶Œ ë“±</td></tr><tr style="background-color:#eeefff; font-weight:bold"><td class="listn">6</td><td class="ì ìš”">LTV<div class="dpSm text-muted small">ëŒ€ì¶œê¸ˆì•¡ ë“± / ë‹´ë³´ê°€ì¹˜ Ã— 100</div></td><td class="ê¸ˆì•¡">%</td><td class="ë¹„ê³  dpLg">ëŒ€ì¶œê¸ˆì•¡ ë“± / ë‹´ë³´ê°€ì¹˜ Ã— 100</td></tr></tbody></table>';
-    //     $('#result1').append(table2);
-    //     n+=1;
-    // });
+		<!--ns>-->
+		<div class="hiding" style="display: block;">
 
-    $('#resetSubmit').on('click',function(){
-        n=1;
-        $('#result1').empty();
-        $('#result1').append(table);      
-        $('.hiding').css('display','none');
-        $('#addSubmit').css('display','none');
-        $('#resetSubmit').css('display','none');
-    });
+			<div id="basisWrap" class="p-3 my-3 alert-info rounded">
+				<h5>°è»ê°á°ú ÇØ¼³</h5>
+				<span id="basis"><p>´ë·«ÀûÀÎ Áö¿ª ±¸ºĞÀ» ÅëÇØ ¼Ò¾×ÀÓÂ÷º¸Áõ±İÀ» °è»êÇÏ¿´½À´Ï´Ù. ±¸,
+						±º, µ¿¿¡ µû¶ó ´Ù¸¦ ¼öµµ ÀÖÀ¸´Ï ¾Æ·¡ Áö¿ªº° ¼Ò¾×ÀÓÂ÷º¸Áõ±İ Ç¥¸¦ º¸°í ºÎÁ¤È®ÇÑ °æ¿ì ¼Ò¾×ÀÓÂ÷º¸Áõ±İÀ» Á÷Á¢
+						ÀÔ·ÂÇØÁÖ¼¼¿ä.</p>
+					<p>
+						¹æ °øÁ¦´Â ±İÀ¶°¨µ¶¿øÀÇ ÀºÇà¾÷°¨µ¶¾÷¹«½ÃÇà¼¼Ä¢¿¡ µû¶ó °è»êµÇ¾ú½À´Ï´Ù. ÀºÇàÀÌ ¼±ÅÃÀûÀ¸·Î Àû¿ëÇÒ ¼ö ÀÖ´Â ±ÔÁ¤ÀÇ °æ¿ì ´ëÃâ
+						°¡´É¾×ÀÌ ÃÖ´ëÇÑÀ¸·Î ³ª¿À´Â ±âÁØÀ» Àû¿ëÇÏ¿© °è»êÇÏ¿´½À´Ï´Ù. »ó¼¼ÇÑ ³»¿ëÀº <a href="/wiki/¹æ_°øÁ¦">À§Å°
+							- ¹æ°øÁ¦</a><a href="/wiki/¹æ_°øÁ¦" target="_blank"><sup><i
+								class="far fa-window-restore" title="»õÃ¢¿­±â" aria-hidden="true"></i><span
+								class="sr-only">»õÃ¢¿­±â</span></sup></a>¸¦ Âü°íÇÏ¼¼¿ä.
+					</p>
+					<p>±âÁ¸ ´ëÃâ, ¼±¼øÀ§Ã¤±Ç, ÀÓÂ÷º¸Áõ±İ, ¼Ò¾×º¸Áõ±İ µîÀÌ Â÷°¨µÇÁö ¾ÊÀº ¿ÂÀüÇÑ ´ãº¸°¡Ä¡¸¦ ±âÁØÀ¸·Î
+						°è»êµÇ¾ú½À´Ï´Ù. ÇØ´çÇÏ´Â »çÇ×ÀÌ ÀüÇô ¾ø´ÂÁö ´Ù½Ã ÇÑ¹ø È®ÀÎÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.</p></span>
+			</div>
+		</div>
+	</div>
 
-    $(document).ready(function(){
-        $('#roomDeduct').change(function(){
-            if($('#roomDeduct').is(':checked')){
-                $('#onlv').css('display','block');        
-                $('#pd').css('display','block');
-                $('#rnum').css('display','block');               
-            }else{  
-                $('.cuscon-input').prop('checked',false);
-                $('#pd2').css('display','none');  
-                $('#dpi').css('display','none');        
-                $('#lr').css('display','none');            
-                $('#onlv').css('display','none');        
-                $('#pd').css('display','none');
-                $('#rnum').css('display','none');                
-            }
-        });
-    });
+	</div>
 
-    $(document).ready(function(){
-        $('#onLease').change(function(){
-            if($('#onLease').is(':checked')){
-                $('#dpi').css('display','block');        
-                $('#lr').css('display','block');               
-            }else{
-                $('#dpi').css('display','none');        
-                $('#lr').css('display','none');
-            }
-        });
-    });
+	<script>
+		// $('#submit').on('click',function(){
+		//     $('.hiding').css('display','block');
+		//     $('#addSubmit').css('display','block');
+		//     $('#resetSubmit').css('display','block');
+		//     let table3 = '<div class="page-header mb-2"><span class="h5">°è»ê¼­ 1</span><i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i></div><table id="tb" class="table table-bordered tlf mb-4"><thead><tr><th class="listn">#</th><th>Àû¿ä</th><th>±İ¾×</th><th class="dpLg">ºñ°í</th></tr></thead><tbody><tr><td class="listn">1</td><td class="Àû¿ä">´ëÃâ±İ¾×<div class="dpSm text-muted small">ÀÔ·Â°ª</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">ÀÔ·Â°ª</td></tr><tr><td class="listn">2</td><td class="Àû¿ä">´ãº¸°¡Ä¡<div class="dpSm text-muted small">ÀÔ·Â°ª</div></td><td class="±İ¾×"></td> <td class="ºñ°í dpLg">ÀÔ·Â°ª</td></tr><tr><td class="listn">3</td><td class="Àû¿ä">¼Ò¾×º¸Áõ±İ<div class="dpSm text-muted small">Áö¿ªº° ¼Ò¾×º¸Áõ±İ Àû¿ë(ÇÏ´Ü ÂüÁ¶)</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">Áö¿ªº° ¼Ò¾×º¸Áõ±İ Àû¿ë(ÇÏ´Ü ÂüÁ¶)</td></tr> <tr><td class="listn">4</td><td class="Àû¿ä">ÃÖ¿ì¼±º¯Á¦±İ¾×<div class="dpSm text-muted small">Àû¿ë ¹æ¼ö(0) ¡¿ 0¿ø</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">Àû¿ë ¹æ¼ö(0) ¡¿ 0¿ø</td></tr><tr><td class="listn">5</td><td class="Àû¿ä">´ëÃâ±İ¾× µî<div class="dpSm text-muted small">´ëÃâ±İ + º¸Áõ±İ + ¼±¼øÀ§Ã¤±Ç µî</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">´ëÃâ±İ + º¸Áõ±İ + ¼±¼øÀ§Ã¤±Ç µî</td></tr><tr style="background-color:#eeefff; font-weight:bold"><td class="listn">6</td><td class="Àû¿ä">LTV<div class="dpSm text-muted small">´ëÃâ±İ¾× µî / ´ãº¸°¡Ä¡ ¡¿ 100</div></td><td class="±İ¾×">%</td><td class="ºñ°í dpLg">´ëÃâ±İ¾× µî / ´ãº¸°¡Ä¡ ¡¿ 100</td></tr></tbody></table>';
+		//     $('#result1').show(table3);
+		// });
 
-    $(document).ready(function(){
-        $('#customPriorityDeposit').change(function(){
-            if($('#customPriorityDeposit').is(':checked')){
-                $('#pd2').css('display','block');                               
-            }else{
-                $('#pd2').css('display','none');               
-            }
-        });
-    });
+		$('#submit').on('click', function() {
+			$('.hiding').css('display', 'block');
+			// $('#addSubmit').css('display','block');
+			// $('#resetSubmit').css('display','block');
+		});
 
-    $(document).ready(function(){
-        $('#number').change(function(){
-            if($('#number').is(':checked')){
-                $('.listn').show();
-            }else{
-                $('.listn').hide();
-            }           
-        });
-    });
-    
-</script>
+		// console.log(table);
+		// let table2 = $('.h5').text();
+		// console.log(table2);        
+
+		// $('.h5').text('°è»ê¼­'+cnt); 
+		// let cnt = 1;
+
+		// let table = $('#result1').html();
+		// var n = 2;
+		// // var n = parseInt($('.h5').text().replace(/[^0-9]/g,''));
+
+		// $('#addSubmit').on('click',function(){
+		//     let table2 = '<div class="page-header mb-2"><span class="h5">°è»ê¼­ '+n+'</span><i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i></div><table id="tb" class="table table-bordered tlf mb-4"><thead><tr><th class="listn">#</th><th>Àû¿ä</th><th>±İ¾×</th><th class="dpLg">ºñ°í</th></tr></thead><tbody><tr><td class="listn">1</td><td class="Àû¿ä">´ëÃâ±İ¾×<div class="dpSm text-muted small">ÀÔ·Â°ª</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">ÀÔ·Â°ª</td></tr><tr><td class="listn">2</td><td class="Àû¿ä">´ãº¸°¡Ä¡<div class="dpSm text-muted small">ÀÔ·Â°ª</div></td><td class="±İ¾×"></td> <td class="ºñ°í dpLg">ÀÔ·Â°ª</td></tr><tr><td class="listn">3</td><td class="Àû¿ä">¼Ò¾×º¸Áõ±İ<div class="dpSm text-muted small">Áö¿ªº° ¼Ò¾×º¸Áõ±İ Àû¿ë(ÇÏ´Ü ÂüÁ¶)</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">Áö¿ªº° ¼Ò¾×º¸Áõ±İ Àû¿ë(ÇÏ´Ü ÂüÁ¶)</td></tr> <tr><td class="listn">4</td><td class="Àû¿ä">ÃÖ¿ì¼±º¯Á¦±İ¾×<div class="dpSm text-muted small">Àû¿ë ¹æ¼ö(0) ¡¿ 0¿ø</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">Àû¿ë ¹æ¼ö(0) ¡¿ 0¿ø</td></tr><tr><td class="listn">5</td><td class="Àû¿ä">´ëÃâ±İ¾× µî<div class="dpSm text-muted small">´ëÃâ±İ + º¸Áõ±İ + ¼±¼øÀ§Ã¤±Ç µî</div></td><td class="±İ¾×"></td><td class="ºñ°í dpLg">´ëÃâ±İ + º¸Áõ±İ + ¼±¼øÀ§Ã¤±Ç µî</td></tr><tr style="background-color:#eeefff; font-weight:bold"><td class="listn">6</td><td class="Àû¿ä">LTV<div class="dpSm text-muted small">´ëÃâ±İ¾× µî / ´ãº¸°¡Ä¡ ¡¿ 100</div></td><td class="±İ¾×">%</td><td class="ºñ°í dpLg">´ëÃâ±İ¾× µî / ´ãº¸°¡Ä¡ ¡¿ 100</td></tr></tbody></table>';
+		//     $('#result1').append(table2);
+		//     n+=1;
+		// });
+
+		$('#resetSubmit').on('click', function() {
+			n = 1;
+			$('#result1').empty();
+			$('#result1').append(table);
+			$('.hiding').css('display', 'none');
+			$('#addSubmit').css('display', 'none');
+			$('#resetSubmit').css('display', 'none');
+		});
+
+		/* $(document).ready(function() {
+			$('#roomDeduct').change(function() {
+				if ($('#roomDeduct').is(':checked')) {
+					$('#onlv').css('display', 'block');
+					$('#pd').css('display', 'block');
+					$('#rnum').css('display', 'block');
+				} else {
+					$('.cuscon-input').prop('checked', false);
+					$('#pd2').css('display', 'none');
+					$('#dpi').css('display', 'none');
+					$('#lr').css('display', 'none');
+					$('#onlv').css('display', 'none');
+					$('#pd').css('display', 'none');
+					$('#rnum').css('display', 'none');
+				}
+			});
+		});
+
+		$(document).ready(function() {
+			$('#onLease').change(function() {
+				if ($('#onLease').is(':checked')) {
+					$('#dpi').css('display', 'block');
+					$('#lr').css('display', 'block');
+				} else {
+					$('#dpi').css('display', 'none');
+					$('#lr').css('display', 'none');
+				}
+			});
+		});
+
+		$(document).ready(function() {
+			$('#customPriorityDeposit').change(function() {
+				if ($('#customPriorityDeposit').is(':checked')) {
+					$('#pd2').css('display', 'block');
+				} else {
+					$('#pd2').css('display', 'none');
+				}
+			});
+		});
+
+		$(document).ready(function() {
+			$('#number').change(function() {
+				if ($('#number').is(':checked')) {
+					$('.listn').show();
+				} else {
+					$('.listn').hide();
+				}
+			});
+		}); */
+	</script>
 </body>
 </html>
