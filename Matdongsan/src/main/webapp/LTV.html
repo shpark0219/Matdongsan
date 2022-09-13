@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.6.0.min.js"></script>   
+    <style>
+        .capture-media {position:relative;}
+        .capture-media .spinner-grow {position:relative; position: absolute; left: 27px; top: 15px; display:none;}
+        @media (max-width: 500px) {
+            .saveButtons .btn {
+              padding: .4rem .65rem !important;
+              letter-spacing: -0.1rem;
+            }
+        } 
+        
+        .hiding {
+            display: none;
+        }
+    </style>
+</head>
+<body>    
+    <div id="contents">				
+		<!-- <form id="form_commission" class="form-horizontal form-group-lg">
+		<input type="hidden" id="areaType" name="areaType" value="seoul">
+		<input type="hidden" id="realEstateType" name="realEstateType" value="house">
+		<div class="row">
+			<div class="col-12">
+				<div id="rd" class="custom-control custom-checkbox mb-2 mr-3 d-inline-block">
+					<input type="checkbox" class="cuscon-input" name="roomDeduct" value="Y" id="roomDeduct" checked="">
+					<label class="custom-control-label" for="roomDeduct">방 공제</label>
+					<i class="small fas fa-question-circle click" data-toggle="modal" data-target="#roomDeductInfoModal" aria-hidden="true"></i>
+				</div>
+				<div id="onls" class="custom-control custom-checkbox mb-2 mr-3 d-inline-block" display="inline-block">
+					<input type="checkbox" class="cuscon-input" name="onLease" value="Y" id="onLease" >
+					<label class="custom-control-label" for="onLease">임대 중</label>
+				</div>
+				<div id="onlv" class="custom-control custom-checkbox mb-2 mr-3 roomGroup primary livingGroup d-inline-block" display="inline-block">
+					<input type="checkbox" class="cuscon-input" name="onLiving" value="Y" id="onLiving" >
+					<label class="custom-control-label" for="onLiving">거주 중</label>
+				</div>
+			</div>
+			<div class="col-12 roomGroup primary">
+				<div id="pd" class="custom-control custom-checkbox mb-2 mr-3 d-inline-block">
+					<input type="checkbox" class="cuscon-input" id="customPriorityDeposit">
+					<label class="custom-control-label" for="customPriorityDeposit">소액보증금 직접입력</label>
+				</div>
+			</div> -->
+			<div class="col-md-6 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">대출금액</span>
+					</div>
+					<input type="number" class="form-control number-helper" id="amount" name="amount" placeholder="대출 희망금액" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">만원</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">담보가치</span>
+					</div>
+					<input type="number" class="form-control number-helper" id="price" name="price" placeholder="평균 시세(감정가)" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">만원</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 mb-3">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							선순위채권&nbsp;
+							<i class="fas fa-question-circle small" data-toggle="tooltip" data-placement="top" title="" aria-hidden="true" data-original-title="기존 대출 등이 있는 경우. 근저당은 채권최고액 기준으로 입력"></i><span class="sr-only">기존 대출 등이 있는 경우. 근저당은 채권최고액 기준으로 입력</span>
+						</span>
+					</div>
+					<input type="number" class="form-control number-helper" id="seniorBond" name="seniorBond" placeholder="선순위 대출 등" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">만원</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-3 leaseGroup d-none">
+				<div id="dpi" class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">임차보증금</span>
+					</div>
+					<input type="number" class="form-control number-helper" id="deposit" name="deposit" placeholder="전월세의 보증금" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">만원</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-3 priorityDepositGroup roomGroup d-none">
+				<div id="pd2" class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">소액보증금</span>
+					</div>
+					<input type="number" class="form-control" id="priorityDeposit" name="priorityDeposit" placeholder="미입력 시 기본값" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">만원</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-3 roomGroup primary">
+				<div id="rnum" class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">방 수</span>
+					</div>
+					<input type="number" class="form-control" id="room" name="room" placeholder="소액보증금 계산용" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">개</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-3 leaseGroup roomGroup d-none">
+				<div id="lr" class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">임대 방 수</span>
+					</div>
+					<input type="number" class="form-control" id="leaseRoom" name="leaseRoom" placeholder="소액보증금 계산용" value="">
+					<div class="input-group-append">
+						<span class="input-group-text">개</span>
+					</div>
+				</div>
+			</div>
+				
+			<div class="col-md-8 nocap">
+				<!--<ns-->
+				<button id="submit" type="button" class="btn btn btn-primary">
+					<i class="fas fa-calculator" aria-hidden="true"></i> LTV계산
+				</button>				
+				<!--ns>-->
+			</div>
+		</div>
+		</form>
+	
+    <div class="hiding">
+        <div class="mt-4">
+            <div class="d-inline mr-3 h4 font-weight-bold">계산 결과</div> 
+            <div class="custom-control custom-checkbox mb-3 d-inline ml-2 nocap">
+                <input type="checkbox" id="number" class="custom-control-input" checked="">
+                <label class="custom-control-label" for="number">순번</label>
+            </div>
+                <!--
+                <div class="custom-control custom-checkbox mb-3 d-inline mx-1">
+                <input type="checkbox" id="dscp" class="custom-control-input" onchange="hideCol('table',4)" checked>
+                <label class="custom-control-label" for="dscp">비고</label>
+                -->
+        </div>
+        <hr>
+        <div id="resultSet" style="overflow-x: auto; white-space: nowrap;">
+            <div class="hiding">                
+                <hr>
+                <div id="resultSet" style="overflow-x: auto; white-space: nowrap;">
+                    <div id="result1" class="result pr-4">
+                        <!-- 태그들어갈부분 -->
+                        
+                    <div class="page-header mb-2"><span class="h5">계산서 1</span>&nbsp;
+                        <i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i>
+                    </div>
+                        <table id="tb" class="table table-bordered tlf mb-4">
+                            <thead>
+                                <tr>
+                                    <th class="listn">#</th>
+                                    <th>적요</th>
+                                    <th>금액</th>
+                                    <th class="dpLg">비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="listn">1</td>
+                                    <td class="적요">대출금액<div class="dpSm text-muted small">입력값</div></td>
+                                    <td class="금액"></td>
+                                    <td class="비고 dpLg">입력값</td>
+                                </tr>
+                                <tr>
+                                    <td class="listn">2</td>
+                                    <td class="적요">담보가치<div class="dpSm text-muted small">입력값</div></td>
+                                    <td class="금액"></td>
+                                    <td class="비고 dpLg">입력값</td>
+                                </tr>
+                                <tr>
+                                    <td class="listn">3</td>
+                                    <td class="적요">소액보증금<div class="dpSm text-muted small">지역별 소액보증금 적용(하단 참조)</div></td>
+                                    <td class="금액"></td>
+                                    <td class="비고 dpLg">지역별 소액보증금 적용(하단 참조)</td>
+                                </tr>
+                                <tr>
+                                    <td class="listn">4</td>
+                                    <td class="적요">최우선변제금액<div class="dpSm text-muted small">적용 방수(0) × 0원</div></td>
+                                    <td class="금액"></td><td class="비고 dpLg">적용 방수(0) × 0원</td>
+                                </tr>
+                                <tr>
+                                    <td class="listn">5</td>
+                                    <td class="적요">대출금액 등<div class="dpSm text-muted small">대출금 + 보증금 + 선순위채권 등</div></td>
+                                    <td class="금액"></td>
+                                    <td class="비고 dpLg">대출금 + 보증금 + 선순위채권 등</td>
+                                </tr>
+                                <tr style="background-color:#eeefff; font-weight:bold">
+                                    <td class="listn">6</td>
+                                    <td class="적요">LTV<div class="dpSm text-muted small">대출금액 등 / 담보가치 × 100</div></td>
+                                    <td class="금액">%</td>
+                                    <td class="비고 dpLg">대출금액 등 / 담보가치 × 100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> 
+            </div>
+        </div>           
+                
+                    <!--ns>-->
+                <div class="hiding" style="display: block;">
+                    
+                    <div id="basisWrap" class="p-3 my-3 alert-info rounded">
+                        <h5>계산결과 해설</h5>
+                        <span id="basis"><p>대략적인 지역 구분을 통해 소액임차보증금을 계산하였습니다. 구, 군, 동에 따라 다를 수도 있으니 아래 지역별 소액임차보증금 표를 보고 부정확한 경우 소액임차보증금을 직접 입력해주세요.</p><p>방 공제는 금융감독원의 은행업감독업무시행세칙에 따라 계산되었습니다. 은행이 선택적으로 적용할 수 있는 규정의 경우 대출 가능액이 최대한으로 나오는 기준을 적용하여 계산하였습니다. 상세한 내용은 <a href="/wiki/방_공제">위키 - 방공제</a><a href="/wiki/방_공제" target="_blank"><sup><i class="far fa-window-restore" title="새창열기" aria-hidden="true"></i><span class="sr-only">새창열기</span></sup></a>를 참고하세요.</p><p>기존 대출, 선순위채권, 임차보증금, 소액보증금 등이 차감되지 않은 온전한 담보가치를 기준으로 계산되었습니다. 해당하는 사항이 전혀 없는지 다시 한번 확인해주시기 바랍니다.</p></span>
+                    </div>
+                </div>
+            </div>
+        
+</div>
+
+<script>
+    
+    // $('#submit').on('click',function(){
+    //     $('.hiding').css('display','block');
+    //     $('#addSubmit').css('display','block');
+    //     $('#resetSubmit').css('display','block');
+    //     let table3 = '<div class="page-header mb-2"><span class="h5">계산서 1</span><i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i></div><table id="tb" class="table table-bordered tlf mb-4"><thead><tr><th class="listn">#</th><th>적요</th><th>금액</th><th class="dpLg">비고</th></tr></thead><tbody><tr><td class="listn">1</td><td class="적요">대출금액<div class="dpSm text-muted small">입력값</div></td><td class="금액"></td><td class="비고 dpLg">입력값</td></tr><tr><td class="listn">2</td><td class="적요">담보가치<div class="dpSm text-muted small">입력값</div></td><td class="금액"></td> <td class="비고 dpLg">입력값</td></tr><tr><td class="listn">3</td><td class="적요">소액보증금<div class="dpSm text-muted small">지역별 소액보증금 적용(하단 참조)</div></td><td class="금액"></td><td class="비고 dpLg">지역별 소액보증금 적용(하단 참조)</td></tr> <tr><td class="listn">4</td><td class="적요">최우선변제금액<div class="dpSm text-muted small">적용 방수(0) × 0원</div></td><td class="금액"></td><td class="비고 dpLg">적용 방수(0) × 0원</td></tr><tr><td class="listn">5</td><td class="적요">대출금액 등<div class="dpSm text-muted small">대출금 + 보증금 + 선순위채권 등</div></td><td class="금액"></td><td class="비고 dpLg">대출금 + 보증금 + 선순위채권 등</td></tr><tr style="background-color:#eeefff; font-weight:bold"><td class="listn">6</td><td class="적요">LTV<div class="dpSm text-muted small">대출금액 등 / 담보가치 × 100</div></td><td class="금액">%</td><td class="비고 dpLg">대출금액 등 / 담보가치 × 100</td></tr></tbody></table>';
+    //     $('#result1').show(table3);
+    // });
+
+    $('#submit').on('click',function(){
+        $('.hiding').css('display','block');
+        // $('#addSubmit').css('display','block');
+        // $('#resetSubmit').css('display','block');
+    });
+    
+    
+    // console.log(table);
+    // let table2 = $('.h5').text();
+    // console.log(table2);        
+    
+    // $('.h5').text('계산서'+cnt); 
+    // let cnt = 1;
+    
+         
+    // let table = $('#result1').html();
+    // var n = 2;
+    // // var n = parseInt($('.h5').text().replace(/[^0-9]/g,''));
+    
+    // $('#addSubmit').on('click',function(){
+    //     let table2 = '<div class="page-header mb-2"><span class="h5">계산서 '+n+'</span><i class="far fa-copy click" onclick="copyTable(this)" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fas fa-file-csv click" onclick="downloadCsv(this)" aria-hidden="true"></i></div><table id="tb" class="table table-bordered tlf mb-4"><thead><tr><th class="listn">#</th><th>적요</th><th>금액</th><th class="dpLg">비고</th></tr></thead><tbody><tr><td class="listn">1</td><td class="적요">대출금액<div class="dpSm text-muted small">입력값</div></td><td class="금액"></td><td class="비고 dpLg">입력값</td></tr><tr><td class="listn">2</td><td class="적요">담보가치<div class="dpSm text-muted small">입력값</div></td><td class="금액"></td> <td class="비고 dpLg">입력값</td></tr><tr><td class="listn">3</td><td class="적요">소액보증금<div class="dpSm text-muted small">지역별 소액보증금 적용(하단 참조)</div></td><td class="금액"></td><td class="비고 dpLg">지역별 소액보증금 적용(하단 참조)</td></tr> <tr><td class="listn">4</td><td class="적요">최우선변제금액<div class="dpSm text-muted small">적용 방수(0) × 0원</div></td><td class="금액"></td><td class="비고 dpLg">적용 방수(0) × 0원</td></tr><tr><td class="listn">5</td><td class="적요">대출금액 등<div class="dpSm text-muted small">대출금 + 보증금 + 선순위채권 등</div></td><td class="금액"></td><td class="비고 dpLg">대출금 + 보증금 + 선순위채권 등</td></tr><tr style="background-color:#eeefff; font-weight:bold"><td class="listn">6</td><td class="적요">LTV<div class="dpSm text-muted small">대출금액 등 / 담보가치 × 100</div></td><td class="금액">%</td><td class="비고 dpLg">대출금액 등 / 담보가치 × 100</td></tr></tbody></table>';
+    //     $('#result1').append(table2);
+    //     n+=1;
+    // });
+
+    $('#resetSubmit').on('click',function(){
+        n=1;
+        $('#result1').empty();
+        $('#result1').append(table);      
+        $('.hiding').css('display','none');
+        $('#addSubmit').css('display','none');
+        $('#resetSubmit').css('display','none');
+    });
+
+    $(document).ready(function(){
+        $('#roomDeduct').change(function(){
+            if($('#roomDeduct').is(':checked')){
+                $('#onlv').css('display','block');        
+                $('#pd').css('display','block');
+                $('#rnum').css('display','block');               
+            }else{  
+                $('.cuscon-input').prop('checked',false);
+                $('#pd2').css('display','none');  
+                $('#dpi').css('display','none');        
+                $('#lr').css('display','none');            
+                $('#onlv').css('display','none');        
+                $('#pd').css('display','none');
+                $('#rnum').css('display','none');                
+            }
+        });
+    });
+
+    $(document).ready(function(){
+        $('#onLease').change(function(){
+            if($('#onLease').is(':checked')){
+                $('#dpi').css('display','block');        
+                $('#lr').css('display','block');               
+            }else{
+                $('#dpi').css('display','none');        
+                $('#lr').css('display','none');
+            }
+        });
+    });
+
+    $(document).ready(function(){
+        $('#customPriorityDeposit').change(function(){
+            if($('#customPriorityDeposit').is(':checked')){
+                $('#pd2').css('display','block');                               
+            }else{
+                $('#pd2').css('display','none');               
+            }
+        });
+    });
+
+    $(document).ready(function(){
+        $('#number').change(function(){
+            if($('#number').is(':checked')){
+                $('.listn').show();
+            }else{
+                $('.listn').hide();
+            }           
+        });
+    });
+    
+</script>
+</body>
+</html>
