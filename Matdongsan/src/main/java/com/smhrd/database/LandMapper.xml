@@ -4,18 +4,25 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- mapper 태그 : SQL문 정리하는 태그 -->
 <!-- namespace : id를 그룹화, mapper의 경로를 입력 -->
-<mapper namespace="com.smhrd.database.Mapper">
+<mapper namespace="com.smhrd.database.LandMapper">
 	<!-- select, insert, update, delete 태그들이 존재함 -->
 	<!-- id : 해당 태그의 고유한 식별자 -->
 	<!-- parameterType : 매개변수 타입 -->
 	<!-- resultType : 리턴타입 -->
 	<!-- 바인드변수처럼 #{필드명=컬럼명} -->
-	<insert id="insertTest" parameterType="com.smhrd.domain.Test">
-		insert into Test values (#{id}, #{pw})
-	</insert>
-	<select id="selectTest" parameterType="com.smhrd.domain.Test"
-							resultType="com.smhrd.domain.Test">
-		select * from Test where id=#{id} and pw=#{pw}
-		
-	</select>
+ 	<insert id="insertMember" parameterType="com.smhrd.domain.Member">
+ 		insert into userinfo values (#{id},#{pw},#{email})	
+ 	</insert>
+ 	<select id="selectMember" parameterType="com.smhrd.domain.Member"
+ 								resultType="com.smhrd.domain.Member">
+ 		select * from userinfo where id=#{id} and pw=#{pw}
+ 	</select>
+ 	<update id="updateMember" parameterType="com.smhrd.domain.Member">
+ 		update userinfo set pw=#{pw}, email=#{email}
+ 		where id=#{id} 	
+ 	</update>
+ 
+
+ 	
+
 </mapper>
