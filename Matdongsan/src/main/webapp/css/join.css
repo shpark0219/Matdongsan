@@ -59,7 +59,7 @@
     padding: 30px, 20px;
     background-color:#FFFFFF;
     text-align:center;
-    top:65%;
+    top:60%;
     left:52%;
     transform: translate(-50%,-50%);
     border-radius: 5px;
@@ -118,7 +118,7 @@
     left:20%;
     transform: translateX(-50%);
     margin-bottom: 50px;
-    width:30%;
+    width:40%;
     height:50px;
     background: #005555;
     background-size: 200%;
