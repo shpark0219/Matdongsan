@@ -11,7 +11,7 @@ public class SqlSessionManager {
 	// SqlSessionFactory --> Connection과 같은 역할
 	// conn, close 자원 소모가 심했음. mybatis 해결
 	// Connection 객체를 미리 만들어 놓음(Connection Pool)
-	// 커넥션풀은 미리 만ㄷ르어진 연결을 빌리고 반납하는 형태로 관리
+	// 커넥션풀은 미리 만들어진 연결을 빌리고 반납하는 형태로 관리
 
 	// static{} --> 객체를 호출할때 무조건 한번 실행되는 부분
 	static SqlSessionFactory sqlSessionFactory;

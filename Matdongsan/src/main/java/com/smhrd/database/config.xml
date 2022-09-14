@@ -17,6 +17,6 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="com/smhrd/database/Mapper.xml"/>
+    <mapper resource="com/smhrd/database/LandMapper.xml"/>
   </mappers>
 </configuration>
