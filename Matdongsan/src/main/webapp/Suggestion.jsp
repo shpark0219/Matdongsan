@@ -135,8 +135,7 @@
 							<div class="col-12 mb-3">
 								<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="건의사항을 입력하세요."></textarea>
 							</div>
-
-							<div class="col-12">
+							<div class="col-12" style="text-align: center">
 								<input type="submit" value="건의사항 전송" class="btn btn-primary">
 							</div>
 						</div>

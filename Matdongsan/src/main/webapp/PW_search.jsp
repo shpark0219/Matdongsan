@@ -52,7 +52,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
@@ -85,7 +85,7 @@
        <br>
        <br>
        
-        <input type="button" class="btn" value="비밀번호 찾기" onClick="location.href='member.html'"/>
+        <input type="button" class="btn" value="비밀번호 찾기" onClick="location.href='member.jsp'"/>
       </form>
 
 
