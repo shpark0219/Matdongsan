@@ -29,7 +29,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Matdongsan/css/join.css">
+    <link rel="stylesheet" href="css/join.css">
 </head>
 <body>
 
@@ -46,7 +46,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
@@ -88,7 +88,7 @@
        <br>
        <br>
        
-        <input type="button" class="btn" value="L O G I N" onClick="location.href='Login.html'"/>
+        <input type="button" class="btn" value="L O G I N" onClick="location.href='login.jsp'"/>
       </form>
 
 
