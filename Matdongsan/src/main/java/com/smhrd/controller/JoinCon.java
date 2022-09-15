@@ -20,29 +20,30 @@ public class JoinCon extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		// 1. 파라미터 수집		
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String email = request.getParameter("email");
+		// 1. 파라미터 수집	
 		
+		String id = request.getParameter("JoinId");
+		String pw = request.getParameter("JoinPw");
+		String pw2 = request.getParameter("JoinPw2");
+		String email = request.getParameter("JoinEmail");
+			
 		// 2. 수집된 데이터를 Member객체에 담기		
 		Member member = new Member(id, pw, email);
 		
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.insertMember(member);
 		
+		
 		// 6. 명령 후 처리
 		if(cnt>0) {
-			System.out.println("회원가입 성공!!");
-			response.sendRedirect("Question4_Login.jsp");
+			request.setAttribute("JoinInfo", member);
+			response.sendRedirect("Confirm.jsp");
 			
 //			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
-//			request.setAttribute("joinInfo", dto);
 //			rd.forward(request, response);
 			
 		}else {
-			System.out.println("회원가입 실패!!");
-			response.sendRedirect("Question4_Login.jsp");
+			response.sendRedirect("login.jsp");
 		}
 		
 		

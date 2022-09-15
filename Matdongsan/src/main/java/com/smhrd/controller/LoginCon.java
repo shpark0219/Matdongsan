@@ -23,8 +23,11 @@ public class LoginCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// 1. 파라미터 수집
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String id = request.getParameter("LoginId");
+		String pw = request.getParameter("LoginPw");
+		
+		System.out.println(id);
+		System.out.println(pw);
 		
 		// 2. 수집된 데이터를 Member 객체에 담기
 		Member member = new Member(id, pw);
@@ -36,25 +39,22 @@ public class LoginCon extends HttpServlet {
 		// 5. MemberDAO 객체 생성, 메소드 호출
 		MemberDAO dao = new MemberDAO();
 		Member loginMember = dao.selectMember(member);
+		System.out.println(loginMember);
 		
 		// 6. 명령 후 처리
 		if(loginMember != null) {
-			System.out.println("로그인 성공!");
 			// 세션에 로그인 정보 저장
 			// 1. 세션 객체 생성
 			HttpSession session = request.getSession();
 			session.setAttribute("selectMember", loginMember);
-			
+			response.sendRedirect("APT_search.jsp");
 			// main.jsp로 이동
 		}else {
-			System.out.println("로그인 실패!");
+			response.sendRedirect("Error.jsp");
 			// main.jsp로 이동
 		}
 		// 페이지 이동 - 성공, 실패 둘 다 메인.jsp로 감
-		response.sendRedirect("Question4_Main.jsp");
 				
 	}		
-		
-	
-
-}
+			
+}	
