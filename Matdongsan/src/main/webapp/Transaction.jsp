@@ -88,6 +88,7 @@
 								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
 
 							</ul>
+							
 						<li><a href="Suggestion.jsp">건의사항</a></li>
 						<li><a href="MyPage.jsp">마이페이지</a></li>
 						<li><a href="Start.jsp">로그아웃</a></li>
