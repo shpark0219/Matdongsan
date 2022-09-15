@@ -70,23 +70,23 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.html">Home</a></li>
-						<li><a href="APT_search.html">매물검색</a></li>
-						<li><a href="Transaction.html">실거래가</a></li>
+						<li class="active"><a href="Start.jsp">Home</a></li>
+						<li><a href="APT_search.jsp">매물검색</a></li>
+						<li><a href="Transaction.jsp">실거래가</a></li>
 						<li class="has-children">
-							<a href="properties.html">부동산계산기</a>
+							<a href="#">부동산계산기</a>
 							<ul class="dropdown">
-								<li><a href="#">LTV 계산기</a></li>
-								<li><a href="#">DSR 계산기</a></li>
-								<li><a href="#">DTI 계산기</a></li>
+								<li><a href="test_LTV.jsp">LTV 계산기</a></li>
+								<li><a href="test_DSR.jsp">DSR 계산기</a></li>
+								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
 
 							</ul>
-						<li><a href="Suggestion.html">건의사항</a></li>
-						<li><a href="MyPage.html">마이페이지</a></li>
-						<li><a href="Start.html">로그아웃</a></li>
+						<li><a href="Suggestion.jsp">건의사항</a></li>
+						<li><a href="MyPage.jsp">마이페이지</a></li>
+						<li><a href="Start.jsp">로그아웃</a></li>
 
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
@@ -119,12 +119,12 @@
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
         <form action="#" method="post">
             <div class="row" id="a">
-                <div class="col-12 mb-3">
-                    <input type="text" class="form-control" name="id" placeholder="아이디 변경">
-                </div>
                 <div class="col-12 mb-3">
                     <input type="email" class="form-control" name="pw" placeholder="비밀번호 변경">
                 </div>
@@ -134,7 +134,6 @@
                 <!-- <div class="col-12 mb-3">
                     <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder=""></textarea>
                 </div> -->
-
                 <div class="col-12" style="text-align: center;">
                     <input type="submit" value="회원정보 수정" class="btn btn-primary">
                 </div>
@@ -144,7 +143,8 @@
             
             <div class="row" id="b">
 				<div class="col-12" style="text-align: center;">					
-                   <span><input type="sumit" value="검색한 아파트 목록" id="c1" class="btn btn-primary" onclick="lookBtn()"></span>                                     
+                   <span><input type="sumit" value="검색한 아파트 목록" id="c1" class="btn btn-primary" onclick="lookBtn()" style="margin-top:0px;"></span>
+                   <br>                                    
                    <span><input type="sumit" value="내 건의사항 목록" id="c2" class="btn btn-primary" onclick="lookBtn()"></span>                                     
                 </div>                         
             </div>
