@@ -66,6 +66,7 @@
 		</div>
 		<form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;"
     style="text-align:center">  
+                           
                                                                                        
         <h2>회원정보 찾기</h2>
         <hr style="width: 550px;">
