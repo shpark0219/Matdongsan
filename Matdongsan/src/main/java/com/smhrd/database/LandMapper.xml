@@ -18,9 +18,13 @@
  		select * from userinfo where id=#{id} and pw=#{pw}
  	</select>
  	<update id="updateMember" parameterType="com.smhrd.domain.Member">
- 		update userinfo set pw=#{pw}, email=#{email}
- 		where id=#{id} 	
+ 		update userinfo set user_pw=#{pw}, user_email=#{email}
+ 		where user_id=#{id} 	
  	</update>
+ 	<select id="selectLand" parameterType="com.smhrd.domain.LandDTO"
+ 								resultType="com.smhrd.domain.LandDTO">
+ 		select * from landinfo where apt_name =#{input} or apt_addr=#{input}
+  	</select>
  
 
  	

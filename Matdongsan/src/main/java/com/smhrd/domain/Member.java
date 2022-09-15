@@ -2,10 +2,26 @@ package com.smhrd.domain;
 // 테이블 이름과 VO 객체 이름 일치 시키기
 public class Member {
 	// 접근제한자
+	private String no;
 	private String id;
 	private String pw;
 	private String email;
-	
+		
+	 
+	public Member(String no, String id, String pw, String email) {
+		super();
+		this.no = no;
+		this.id = id;
+		this.pw = pw;
+		this.email = email;
+	}
+ 
+	public Member(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
+	}
+		
 	public Member(String id, String pw, String email) {
 		super();
 		this.id = id;
@@ -13,10 +29,12 @@ public class Member {
 		this.email = email;
 	}
 
-	public Member(String id, String pw) {
-		super();
-		this.id = id;
-		this.pw = pw;
+	public String getNo() {
+		return no;
+	}
+
+	public void setNo(String no) {
+		this.no = no;
 	}
 
 	public String getId() {
@@ -42,5 +60,8 @@ public class Member {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	
+	
 	
 }

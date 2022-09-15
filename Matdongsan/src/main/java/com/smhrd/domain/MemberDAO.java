@@ -9,7 +9,7 @@ public class MemberDAO {
 	// SqlSessionFactory 사용하기 위해 메소드 호출하기!
 	 SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	 SqlSession sqlSession = sqlSessionFactory.openSession();
-	 
+	  
 	 // 회원가입 기능 메소드 만들기
 	 public int insertMember(Member member) {
 		 int cnt = 0;
@@ -17,10 +17,10 @@ public class MemberDAO {
 		 try {
 			 cnt = sqlSession.insert("insertMember", member);
 			 if(cnt > 0) {
-				 System.out.println("회원가입성공");
+				 System.out.println("회원가입 성공!");
 				 sqlSession.commit();
 			 }else {
-				 System.out.println("회원가입 실패");
+				 System.out.println("회원가입 실패!");
 				 sqlSession.rollback();
 			 } // cnt 판단 끝
 		 }finally {
@@ -35,8 +35,10 @@ public class MemberDAO {
 			try {
 				loginMember = sqlSession.selectOne("selectMember", member);
 				if(loginMember != null) {
+					System.out.println("로그인 성공!");
 					sqlSession.commit();
 				}else {
+					System.out.println("로그인 실패!");
 					sqlSession.rollback();
 				}			
 			}finally {

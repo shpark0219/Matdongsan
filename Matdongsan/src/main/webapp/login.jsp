@@ -64,23 +64,23 @@
 			<div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
 			<div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
 		</div>
-		<form action="doJoin" method="POST" class="joinForm_Login" onsubmit="DoJoinForm__submit(this); return false;"
+		<form action="LoginCon" method="POST" class="joinForm_Login" 
      style="text-align:center">                                                                                     
         <h2>로그인</h2>
         <hr style="width: 550x;">
         <div class="fonsize">맛동산에 오신걸 환영합니다. 당신의 정보를 입력하세요.</div><br><br>
         <div class="textForm" >
           
-          <input name="loginId" type="text" class="id" placeholder="아이디">
+          <input name="LoginId" type="text" class="id" placeholder="아이디">
           </input>
         </div>
         <div class="textForm">
            
-           <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호">
+           <input name="LoginPw" type="password" class="pw" placeholder="비밀번호">
         </div>
        <br>
        
-        <input type="button" onClick="location.href='APT_search.html'" class="btn" value="L O G I N" />
+        <input type="submit" class="btn" value="L O G I N" >
       </form>
 
     <script src="js/bootstrap.bundle.min.js"></script>
