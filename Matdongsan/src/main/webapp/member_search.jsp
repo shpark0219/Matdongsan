@@ -65,7 +65,8 @@
 			<div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
 		</div>
 		<form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;"
-    style="text-align:center">                                                                                     
+    style="text-align:center">  
+                                                                                       
         <h2>회원정보 찾기</h2>
         <hr style="width: 550px;">
         <div class="fonsize">회원 정보가 일치하지 않습니다.</div><br><br>
