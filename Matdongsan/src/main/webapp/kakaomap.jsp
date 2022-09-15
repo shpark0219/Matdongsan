@@ -14,10 +14,11 @@
 }
 
 #mapWrapper {
-	width: 50%;
+	width: 40%;
 	height: 400px;
 	z-index: 1;
 	margin-top:120px;
+	margin-left:180px;
 }
 
 #rvWrapper {
@@ -99,7 +100,7 @@
 	left: 0;
 	bottom: 0;
 	width: 400px;
-	margin: 10px 0px 0px 100px;
+	margin: 10px 0px 0px 0px;
 	padding: 5px;
 	overflow-y: auto;
 	background: rgba(255, 255, 255, 0.7);
@@ -420,31 +421,78 @@
 </style>
 <!-- CSS only -->
 
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+
+	<!-- 자동완성 -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="./data.js"></script>
+	
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/join.css">
+    
+    
+    
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
+
 <body>
-<nav class="site-nav">
+<!-- 헤더 시작  -->
+<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>                                                              
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a></a>
 
+
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.html">Home</a></li>
-						<li><a href="APT_search.html">매물검색</a></li>
-						<li><a href="Transaction.html">실거래가</a></li>
+						<li class="active"><a href="Start.jsp">Home</a></li>
+						<li><a href="APT_search.jsp">매물검색</a></li>
+						<li><a href="Transaction.jsp">실거래가</a></li>
 						<li class="has-children">
-							<a href="properties.html">부동산계산기</a>
+							<a href="">부동산계산기</a>
 							<ul class="dropdown">
-								<li><a href="#">LTV 계산기</a></li>
-								<li><a href="#">DSR 계산기</a></li>
-								<li><a href="#">DTI 계산기</a></li>
+								<li><a href="test_LTV.jsp">LTV 계산기</a></li>
+								<li><a href="test_DSR.jsp">DSR 계산기</a></li>
+								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
 
 							</ul>
-						<li><a href="Suggestion.html">건의사항</a></li>
-						<li><a href="contact.html">마이페이지</a></li>
-						<li><a href="start.html">로그아웃</a></li>
+						<li><a href="Suggestion.jsp">건의사항</a></li>
+						<li><a href="MyPage.jsp">마이페이지</a></li>
+						<li><a href="Start.jsp">로그아웃</a></li>
 					</ul>
 
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
@@ -455,6 +503,7 @@
 			</div>
 		</div>
 	</nav>
+	<!-- 헤더 끝 -->
 
 	<div id="container">
 		<div id="rvWrapper">
@@ -518,7 +567,7 @@
     </tr>
   </tbody>
 </table>
-	<div class="map_wrap">
+	<div class="map_wrap" style="margin-left: 130px;">
 		<div id="map"
 			style="width: 20%; height: 80%; position: relative; overflow: hidden;"></div>
 		<ul id="category">
@@ -535,7 +584,7 @@
 			<li id="CS2" data-order="5"><span class="category_bg store"></span>
 				편의점</li>
 		</ul>
-		<div id="menu_wrap" class="bg_white">
+		<div id="menu_wrap" class="bg_white" style="margin-left:0px">
 			<div class="option">
 				<div>
 					<form onsubmit="searchPlaces1(); return false;">
@@ -1125,7 +1174,8 @@
 		var position = marker2.getPosition();
 		toggleMapWrapper(true, position);
 	}
-	
+
+    
 </script>
 </html>
 </body>
