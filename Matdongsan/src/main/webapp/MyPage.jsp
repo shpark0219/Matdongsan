@@ -20,10 +20,40 @@
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
 	<link rel="stylesheet" href="css/tiny-slider.css">
+	
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	<style type="text/css">
+		#a {
+			float: left;
+			margin-right: 10px;
+			width: 30%;			
+		}
+		
+		#b {
+			float: right;
+			width: 65%;
+			margin: auto; 
+			
+		}
+		
+		.col-12.mb-3{
+			box-sizing: content-box;
+		}
+		
+		#c1 {
+			margin-top: 10%;
+			display: inline;
+		}
+		
+		#c2 {
+			margin-top: 10%;
+			display: inline;
+		}		
+		
+	</style>
 </head>
 <body>
 
@@ -85,21 +115,21 @@
         <div class="text">
             <h3 class="mb-0" name="id">test 123</h3>
             <div class="meta mb-3" name="email">test123@gmail.com</div>
-            <p>test123님의 마이페이지 입닌다.</p>
+            <p>test123님의 마이페이지 입니다.</p>
         </div>
     </div>
 
     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-        <form action="#" >
-            <div class="row">
-                <div class="col-6 mb-3">
-                    <input type="text" class="form-control" placeholder="아이디 변경">
-                </div>
-                <div class="col-6 mb-3">
-                    <input type="email" class="form-control" placeholder="비밀번호 변경">
+        <form action="#" method="post">
+            <div class="row" id="a">
+                <div class="col-12 mb-3">
+                    <input type="text" class="form-control" name="id" placeholder="아이디 변경">
                 </div>
                 <div class="col-12 mb-3">
-                    <input type="text" class="form-control" placeholder="이메일 변경">
+                    <input type="email" class="form-control" name="pw" placeholder="비밀번호 변경">
+                </div>
+                <div class="col-12 mb-3">
+                    <input type="text" class="form-control" name="email" placeholder="이메일 변경">
                 </div>
                 <!-- <div class="col-12 mb-3">
                     <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder=""></textarea>
@@ -109,12 +139,53 @@
                     <input type="submit" value="회원정보 수정" class="btn btn-primary">
                 </div>
 
-				<div class="col-12 mb-3">
-                	<br><textarea name="" id="" cols="30" rows="7" class="form-control" placeholder=""></textarea>
-                </div> 
             </div>
         </form>
+            
+            <div class="row" id="b">
+				<div class="col-12" style="text-align: center;">					
+                   <span><input type="sumit" value="검색한 아파트 목록" id="c1" class="btn btn-primary" onclick="lookBtn()"></span>                                     
+                   <span><input type="sumit" value="내 건의사항 목록" id="c2" class="btn btn-primary" onclick="lookBtn()"></span>                                     
+                </div>                         
+            </div>
+            
     </div>
+    <div style="clear:both;"></div>
+    
+    <div class="d-block agent-box p-5"  id="d"  style="display: none !important;">    
+    	<table class="table" >
+    	<h2>목록표</h2>
+		  <thead>
+		    <tr>
+		      <th scope="col">목차</th>
+		      <th scope="col">ID</th>
+		      <th scope="col">제목</th>
+		      <th scope="col">내용</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">1</th>
+		      <td>#</td>
+		      <td>#</td>
+		      <td>#</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">2</th>
+		      <td>#</td>
+		      <td>#</td>
+		      <td>#</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">3</th>
+		      <td colspan="2">#</td>
+		      <td>#</td>
+		    </tr>
+		  </tbody>
+		</table>
+    </div>    
+    
+    <div style="clear:both;"></div>
 	<br>
 	<br>>
 
@@ -187,5 +258,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/esc.js"></script>
+    
   </body>
   </html>
