@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,12 +30,12 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="./data.js"></script>
-
+	
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/Matdongsan/css/join.css">
+    <link rel="stylesheet" href="css/join.css">
 
 </head>
 <script>
@@ -67,24 +68,25 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a></a>
 
+
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.html">Home</a></li>
-						<li><a href="APT_search.html">매물검색</a></li>
-						<li><a href="Transaction.html">실거래가</a></li>
+						<li class="active"><a href="Start.jsp">Home</a></li>
+						<li><a href="APT_search.jsp">매물검색</a></li>
+						<li><a href="Transaction.jsp">실거래가</a></li>
 						<li class="has-children">
-							<a href="properties.html">부동산계산기</a>
+							<a href="">부동산계산기</a>
 							<ul class="dropdown">
-								<li><a href="#">LTV 계산기</a></li>
-								<li><a href="#">DSR 계산기</a></li>
-								<li><a href="#">DTI 계산기</a></li>
+								<li><a href="test_LTV.jsp">LTV 계산기</a></li>
+								<li><a href="test_DSR.jsp">DSR 계산기</a></li>
+								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
 
 							</ul>
-						<li><a href="Suggestion.html">건의사항</a></li>
-						<li><a href="contact.html">마이페이지</a></li>
-						<li><a href="start.html">로그아웃</a></li>
+						<li><a href="Suggestion.jsp">건의사항</a></li>
+						<li><a href="MyPage.jsp">마이페이지</a></li>
+						<li><a href="Start.jsp">로그아웃</a></li>
 					</ul>
 
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
@@ -111,7 +113,7 @@
 					<h1 class="heading" data-aos="fade-up">"Matdongsan"은 사용자가 보기 쉽도록 아파트/주택의 매매 혹은 전/월세 실거래가 <br> 정보  및 유용한 지역 정보를 담고있는 사이트입니다.</h1>
 					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
 						<input id="searchInput" type="text" class="form-control px-4" placeholder="아파트명 또는 지역명을 검색해주세요.">
-						<button type="button" class="btn btn-primary" onClick="location.href='APT_list.html'">Q</button>
+						<button type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button>
 						<br>
 						<br>
 					</form>
@@ -215,7 +217,6 @@
     		<span class="visually-hidden">Loading...</span>
     	</div>
     </div>
-
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
