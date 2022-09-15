@@ -46,7 +46,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
@@ -80,7 +80,7 @@
         </div>
        <br>
        
-        <input type="submit" class="btn" value="L O G I N" >
+        <input type="button" onClick="location.href='APT_search.jsp'" class="btn" value="L O G I N" />
       </form>
 
     <script src="js/bootstrap.bundle.min.js"></script>

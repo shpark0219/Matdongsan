@@ -71,7 +71,7 @@
 					<h1 class="heading" data-aos="fade-up">"Matdongsan"은 사용자가 보기 쉽도록 아파트/주택의 매매 혹은 <br><br> 전/월세 실거래가 정보  및 유용한 지역 정보를 담고있는 사이트입니다.</h1>
 					<br></br>
 					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-						<button type="button" class="btn btn-primary" onClick="location.href='join.jsp'">회원가입</button>
+						<button type="button" class="btn btn-primary" onClick="location.href='Join.jsp'">회원가입</button>
 						<button type="button" class="btn btn-primary" onClick="location.href='login.jsp'">로그인</button>
 					</form>
 				</div>

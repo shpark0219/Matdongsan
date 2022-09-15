@@ -120,6 +120,10 @@
 
 					<br>
 					<br>
+					<br>
+					<br>
+					<br>
+					<br>
 					<form action="doJoin" method="POST" class="joinForm_check" onsubmit="DoJoinForm__submit(this); return false;"
      				style="text-align:center;">
 						<table class="select_check">
