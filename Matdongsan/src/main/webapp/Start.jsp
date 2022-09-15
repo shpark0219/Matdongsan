@@ -46,7 +46,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
@@ -71,8 +71,8 @@
 					<h1 class="heading" data-aos="fade-up">"Matdongsan"은 사용자가 보기 쉽도록 아파트/주택의 매매 혹은 <br><br> 전/월세 실거래가 정보  및 유용한 지역 정보를 담고있는 사이트입니다.</h1>
 					<br></br>
 					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-						<button type="button" class="btn btn-primary" onClick="location.href='Join.html'">회원가입</button>
-						<button type="button" class="btn btn-primary" onClick="location.href='Login.html'">로그인</button>
+						<button type="button" class="btn btn-primary" onClick="location.href='join.jsp'">회원가입</button>
+						<button type="button" class="btn btn-primary" onClick="location.href='login.jsp'">로그인</button>
 					</form>
 				</div>
 			</div>

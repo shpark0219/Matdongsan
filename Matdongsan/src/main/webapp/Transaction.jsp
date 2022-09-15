@@ -73,24 +73,24 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a></a>
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.html">Home</a></li>
-						<li><a href="APT_search.html">매물검색</a></li>
-						<li><a href="Transaction.html">실거래가</a></li>
+						<li class="active"><a href="Start.jsp">Home</a></li>
+						<li><a href="APT_search.jsp">매물검색</a></li>
+						<li><a href="Transaction.jsp">실거래가</a></li>
 						<li class="has-children">
-							<a href="properties.html">부동산계산기</a>
+							<a href="#">부동산계산기</a>
 							<ul class="dropdown">
-								<li><a href="#">LTV 계산기</a></li>
-								<li><a href="#">DSR 계산기</a></li>
-								<li><a href="#">DTI 계산기</a></li>
+								<li><a href="test_LTV.jsp">LTV 계산기</a></li>
+								<li><a href="test_DSR.jsp">DSR 계산기</a></li>
+								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
 
 							</ul>
-						<li><a href="Suggestion.html">건의사항</a></li>
-						<li><a href="contact.html">마이페이지</a></li>
-						<li><a href="Start.html">로그아웃</a></li>
+						<li><a href="Suggestion.jsp">건의사항</a></li>
+						<li><a href="MyPage.jsp">마이페이지</a></li>
+						<li><a href="Start.jsp">로그아웃</a></li>
 					</ul>
 
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
@@ -117,7 +117,7 @@
 					<h1 class="heading" data-aos="fade-up">실거래가</h1>
 					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
 						<input id="searchInput" type="text" class="form-control px-4" placeholder="아파트명 또는 지역명을 검색해주세요.">
-						<button type="button" class="btn btn-primary" onClick="location.href='TR_list.html'">Q</button>
+						<button type="button" class="btn btn-primary" onClick="location.href='TR_list.jsp'">Q</button>
 						<br>
 						<br>
 					</form>
