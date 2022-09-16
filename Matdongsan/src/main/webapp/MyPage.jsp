@@ -23,6 +23,7 @@
 	
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.6.0.min.js"></script>
 
 	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 	<style type="text/css">
@@ -261,6 +262,7 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/esc.js"></script>
-    
+    <script type="text/javascript">
+   
   </body>
   </html>
