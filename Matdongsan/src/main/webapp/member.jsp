@@ -88,7 +88,7 @@
        <br>
        <br>
        
-        <input type="button" class="btn" value="L O G I N" onClick="location.href='login.jsp'"/>
+        <input type="button" class="btn" value="L O G I N" onClick="location.href='login.jsp'" style="top:30px"/>
       </form>
 
 

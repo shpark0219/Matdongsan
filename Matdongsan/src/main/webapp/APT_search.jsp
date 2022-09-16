@@ -68,22 +68,14 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
+					<a href="#" class="logo m-0 float-start">Matdongsan</a>
 					<a></a>
 
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.jsp">Home</a></li>
+						<li class="active"><a href="S"></li>
 						<li><a href="APT_search.jsp">매물검색</a></li>
-						<li><a href="Transaction.jsp">실거래가</a></li>
-						<li class="has-children">
-							<a href="">부동산계산기</a>
-							<ul class="dropdown">
-								<li><a href="test_LTV.jsp">LTV 계산기</a></li>
-								<li><a href="test_DSR.jsp">DSR 계산기</a></li>
-								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
-
-							</ul>
+						<li><a href="CalcLand.jsp">부동산계산기</a></li>
 						<li><a href="Suggestion.jsp">건의사항</a></li>
 						<li><a href="MyPage.jsp">마이페이지</a></li>
 						<li><a href="Start.jsp">로그아웃</a></li>

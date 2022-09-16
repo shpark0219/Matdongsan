@@ -15,11 +15,11 @@
 }
 
 #mapWrapper {
-	width: 40%;
+	width: 75.5%;
 	height: 400px;
 	z-index: 1;
-	margin-top:50px;
-	margin-left:180px;
+	margin-top:70px;
+	margin-left:225px;
 }
 
 #rvWrapper {
@@ -29,18 +29,19 @@
 	right: 0;
 	position: absolute;
 	z-index: 0;
-	left:550px;
-	margin-top:50px;
+	left:400px;
+	margin-top:70px;
+	margin-left:225px;
 }
 
 #container.view_roadview #mapWrapper {
-	width: 50%;
+	width: 37%;
 }
 
 #roadviewControl {
 	position: absolute;
-	top: 50px;
-	left: 120px;
+	top: 73px;
+	left: 228px;
 	width: 40px;
 	height: 40px;
 	z-index: 1;
@@ -64,6 +65,7 @@
 	border-radius: 4px;
 	border: 1px solid #c8c8c8;
 	box-shadow: 0px 1px #888;
+	margin-left:820px;
 }
 
 #close .img {
@@ -92,6 +94,7 @@
 	width: 0%;
 	height: 400px;
 	margin: 30px 400px 0px 300px
+	margin-left:225px;
 	
 }
 
@@ -475,19 +478,10 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start" style="text-decoration: none;">Matdongsan</a>
+					<a href="#" class="logo m-0 float-start" style="text-decoration: none;">Matdongsan</a>
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.jsp">Home</a></li>
 						<li><a href="APT_search.jsp">매물검색</a></li>
-						<li><a href="Transaction.jsp">실거래가</a></li>
-						<li class="has-children">
-							<a href="">부동산계산기</a>
-							<ul class="dropdown">
-								<li><a href="test_LTV.jsp">LTV 계산기</a></li>
-								<li><a href="test_DSR.jsp">DSR 계산기</a></li>
-								<li><a href="test_DTI.jsp">DTI 계산기</a></li>
-
-							</ul>
+						<li><a href="CalcLand.jsp">부동산계산기</a></li>
 						<li><a href="Suggestion.jsp">건의사항</a></li>
 						<li><a href="MyPage.jsp">마이페이지</a></li>
 						<li><a href="Start.jsp">로그아웃</a></li>
@@ -538,7 +532,7 @@
   	</tbody>
   	</table>
 	
-	<div class="map_wrap" style="margin-left: 130px;">
+	<div class="map_wrap" 	style="margin-left:225px;">
 		<div id="map"
 			style="width: 20%; height: 80%; position: relative; overflow: hidden;"></div>
 		<ul id="category" style=" float: left;">
