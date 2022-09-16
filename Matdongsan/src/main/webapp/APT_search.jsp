@@ -68,8 +68,8 @@
 			margin-bottom: 25px;
 		}
 		
-		#popup>h2>#x {
-			float: right;
+		#popup>h2>.btn-close {
+			float: right;			
 		}
 		
 		#lo-ar-name {
@@ -158,13 +158,13 @@
 					<br>
 					<br>
 					
-					<!-- check-box popUp start-->
+					<!-- check-box popUp body-->
 					<div id="mask"></div>
 					<div id="layer_bg"> 
       						 <div id="popup" style=""> 
           						 	<h2>
                						세부사항 선택
-              					 		<button  id="x">X</button>
+              					 		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
            							</h2>
           					 		<!--  컨텐츠 영역입니다.  /*내용*/ -->
 							<form action="doJoin" method="POST" class="joinForm_check" onsubmit="DoJoinForm__submit(this); return false;"
@@ -300,7 +300,7 @@
     		$("#mask").fadeIn(100);
     	});
 
-    	$("#x").on('click', function() {
+    	$(".btn-close").on('click', function() {
     		$("#layer_bg").hide();
     		$("#mask").fadeOut(100);
     	});
