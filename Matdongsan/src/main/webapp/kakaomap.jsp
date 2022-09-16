@@ -25,7 +25,7 @@
 #rvWrapper {
 	width: 50%;
 	height: 400px;
-	top: 0;
+	top: 0; 
 	right: 0;
 	position: absolute;
 	z-index: 0;
