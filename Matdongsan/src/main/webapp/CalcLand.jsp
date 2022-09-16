@@ -201,17 +201,16 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.html" class="logo m-0 float-start">Matdongsan</a>
+					<a href="#" class="logo m-0 float-start">Matdongsan</a>
 
 					<ul
 						class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="Start.html">Home</a></li>
-						<li><a href="APT_search.html">매물검색</a></li>
-						<li><a href="Transaction.html">실거래가</a></li>
-						<li class=""><a>부동산계산기</a>
-						<li><a href="Suggestion.html">건의사항</a></li>
-						<li><a href="contact.html">마이페이지</a></li>
-						<li><a href="Start.html">로그아웃</a></li>
+						
+						<li><a href="APT_search.jsp">매물검색</a></li>
+						<li><a href="CalcLand.jsp">부동산계산기</a></li>
+						<li><a href="Suggestion.jsp">건의사항</a></li>
+						<li><a href="MyPage.jsp">마이페이지</a></li>
+						<li><a href="Start.jsp">로그아웃</a></li>
 
 						<a href="#"
 							class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
