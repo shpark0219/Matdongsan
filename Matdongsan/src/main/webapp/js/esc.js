@@ -1,11 +1,11 @@
 /**
  * 
  */
- 
+
 /*document.getElementById('c').addEventListener('click', lookBtn());
-document.getElementById('c2').addEventListener('click', lookBtn());*/    
+document.getElementById('c2').addEventListener('click', lookBtn());*/
 function lookBtn() {
-	$('#d').css('display','block');	
+	$('#d').css('display', 'block');
 };
 
 // $('#submit').on('click',function(){
@@ -16,8 +16,8 @@ function lookBtn() {
 //     $('#result1').show(table3);
 // });
 
-$('#submit').on('click',function(){
-	$('.hiding').css('display','block');
+$('#submit').on('click', function() {
+	$('.hiding').css('display', 'block');
 	// $('#addSubmit').css('display','block');
 	// $('#resetSubmit').css('display','block');
 });
@@ -30,7 +30,7 @@ $('#submit').on('click',function(){
 // $('.h5').text('계산서'+cnt); 
 // let cnt = 1;
 
-	 
+
 // let table = $('#result1').html();
 // var n = 2;
 // // var n = parseInt($('.h5').text().replace(/[^0-9]/g,''));
@@ -41,61 +41,62 @@ $('#submit').on('click',function(){
 //     n+=1;
 // });
 
-$('#resetSubmit').on('click',function(){
-	n=1;
+$('#resetSubmit').on('click', function() {
+	n = 1;
 	$('#result1').empty();
-	$('#result1').append(table);      
-	$('.hiding').css('display','none');
-	$('#addSubmit').css('display','none');
-	$('#resetSubmit').css('display','none');
+	$('#result1').append(table);
+	$('.hiding').css('display', 'none');
+	$('#addSubmit').css('display', 'none');
+	$('#resetSubmit').css('display', 'none');
 });
 
-$(document).ready(function(){
-	$('#roomDeduct').change(function(){
-		if($('#roomDeduct').is(':checked')){
-			$('#onlv').css('display','block');        
-			$('#pd').css('display','block');
-			$('#rnum').css('display','block');               
-		}else{  
-			$('.cuscon-input').prop('checked',false);
-			$('#pd2').css('display','none');  
-			$('#dpi').css('display','none');        
-			$('#lr').css('display','none');            
-			$('#onlv').css('display','none');        
-			$('#pd').css('display','none');
-			$('#rnum').css('display','none');                
+$(document).ready(function() {
+	$('#roomDeduct').change(function() {
+		if ($('#roomDeduct').is(':checked')) {
+			$('#onlv').css('display', 'block');
+			$('#pd').css('display', 'block');
+			$('#rnum').css('display', 'block');
+		} else {
+			$('.cuscon-input').prop('checked', false);
+			$('#pd2').css('display', 'none');
+			$('#dpi').css('display', 'none');
+			$('#lr').css('display', 'none');
+			$('#onlv').css('display', 'none');
+			$('#pd').css('display', 'none');
+			$('#rnum').css('display', 'none');
 		}
 	});
 });
 
-$(document).ready(function(){
-	$('#onLease').change(function(){
-		if($('#onLease').is(':checked')){
-			$('#dpi').css('display','block');        
-			$('#lr').css('display','block');               
-		}else{
-			$('#dpi').css('display','none');        
-			$('#lr').css('display','none');
+$(document).ready(function() {
+	$('#onLease').change(function() {
+		if ($('#onLease').is(':checked')) {
+			$('#dpi').css('display', 'block');
+			$('#lr').css('display', 'block');
+		} else {
+			$('#dpi').css('display', 'none');
+			$('#lr').css('display', 'none');
 		}
 	});
 });
 
-$(document).ready(function(){
-	$('#customPriorityDeposit').change(function(){
-		if($('#customPriorityDeposit').is(':checked')){
-			$('#pd2').css('display','block');                               
-		}else{
-			$('#pd2').css('display','none');               
+$(document).ready(function() {
+	$('#customPriorityDeposit').change(function() {
+		if ($('#customPriorityDeposit').is(':checked')) {
+			$('#pd2').css('display', 'block');
+		} else {
+			$('#pd2').css('display', 'none');
 		}
 	});
 });
 
-$(document).ready(function(){
-	$('#number').change(function(){
-		if($('#number').is(':checked')){
+$(document).ready(function() {
+	$('#number').change(function() {
+		if ($('#number').is(':checked')) {
 			$('.listn').show();
-		}else{
+		} else {
 			$('.listn').hide();
-		}           
+		}
 	});
 });
+
