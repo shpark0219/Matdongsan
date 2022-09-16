@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+
 #container {
 	overflow: hidden;
 	height: 500px;
@@ -17,7 +18,7 @@
 	width: 40%;
 	height: 400px;
 	z-index: 1;
-	margin-top:120px;
+	margin-top:50px;
 	margin-left:180px;
 }
 
@@ -29,7 +30,7 @@
 	position: absolute;
 	z-index: 0;
 	left:550px;
-	margin-top:120px;
+	margin-top:50px;
 }
 
 #container.view_roadview #mapWrapper {
@@ -38,8 +39,8 @@
 
 #roadviewControl {
 	position: absolute;
-	top: 120px;
-	left: 0px;
+	top: 50px;
+	left: 120px;
 	width: 40px;
 	height: 40px;
 	z-index: 1;
@@ -103,12 +104,11 @@
 	margin: 10px 0px 0px 0px;
 	padding: 5px;
 	overflow-y: auto;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 0);
 	z-index: 1;
 	font-size: 12px;
 	border-radius: 10px;
 }
-
 .bg_white {
 	background: #fff;
 }
@@ -271,7 +271,8 @@
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 	background: #a5d0bb;
 	overflow: hidden;
-	z-index: 2;
+	z-index: 1;
+	display:flex;
 }
 
 #category li {
@@ -474,10 +475,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
-					<a></a>
-
-
+					<a href="Start.jsp" class="logo m-0 float-start" style="text-decoration: none;">Matdongsan</a>
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
 						<li class="active"><a href="Start.jsp">Home</a></li>
 						<li><a href="APT_search.jsp">매물검색</a></li>
@@ -495,10 +493,9 @@
 						<li><a href="Start.jsp">로그아웃</a></li>
 					</ul>
 
-					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+					<a href="#" cls="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
-
 				</div>
 			</div>
 		</div>
@@ -519,58 +516,32 @@
 			<div id="roadviewControl" onclick="setRoadviewRoad()"></div>
 		</div>
 	</div>
-	<table class="table" style="width:20% ; margin:50px 500px 0px 0px;" align="right">
-  <tbody>
+	
+	<!-- 아파트 상세정보  -->
+   <table class="table" style="width:50% ; margin:130px 600px 0px 0px;" align="right"; z-index="1";>
+  	<tbody>
     <tr class="info">
-      <th>아파트 명</th>
-      <td>대광</td>
+      <th style="padding: 1.5rem">APT_NAME</th>   
     </tr>
     <tr>
-      <th>평수</th>
-      <td>36평</td>
+      <th style="padding: 1.5rem">APT_PRICE</th>
     </tr>
     <tr>
-      <th>방향</th>
-      <td>남향</td>
+      <th style="padding: 1.5rem">APT_ADDR</th>
     </tr>
     <tr>
-      <th>매매가격</th>
-      <td>얼마</td>
+      <th style="padding: 1.5rem">APT_INFO</th>
     </tr>
     <tr>
-      <th>화장실/방 수</th>
-      <td>2/4 개</td>
+      <th style="padding: 1.5rem">APT_CHAR</th>
     </tr>
-    <tr>
-      <th>실거래가</th>
-      <td>
-      <table class="table table-striped">
-      <tbody>
-      	<tr>
-      		<th colspan="2">그래프 삽입</th>
-      	</tr>
-      	<tr>
-      		<th>2019년</th>
-      		<th>얼마</th>
-      	</tr>
-      	<tr>
-      		<th>2020년</th>
-      		<th>얼마</th>
-      	</tr>
-      	<tr>
-      		<th>2021년</th>
-      		<th>얼마</th>
-      	</tr>
-      </tbody>
-  	  </table>
-	  </td>
-    </tr>
-  </tbody>
-</table>
+  	</tbody>
+  	</table>
+	
 	<div class="map_wrap" style="margin-left: 130px;">
 		<div id="map"
 			style="width: 20%; height: 80%; position: relative; overflow: hidden;"></div>
-		<ul id="category">
+		<ul id="category" style=" float: left;">
 			<li id="BK9" data-order="0"><span class="category_bg bank"></span>
 				은행</li>
 			<li id="MT1" data-order="1"><span class="category_bg mart"></span>
@@ -599,6 +570,23 @@
 			<div id="pagination"></div>
 		</div>
 	</div>
+	
+	
+
+
+	
+<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200" style="margin-left: 0pxmargin-right:0px;" >
+	<form action="#">
+		<div class="row">
+			<div class="col-12 mb-3">
+				<textarea name="" id="" cols="30" rows="7" class="form-control"></textarea>
+			</div>
+		</div>
+	</form>
+</div>
+	
+					
+	
 
 	<script type="text/javascript"
 		src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1f53b7bbb802bba3aa54c56e58cbfc45&libraries=services"></script>

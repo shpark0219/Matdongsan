@@ -1,4 +1,4 @@
-<%@page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -108,7 +108,7 @@
 		</div>
 	</div>
 
-    <div class="d-block agent-box p-5" style="text-align: center;">
+    <div class="d-block agent-box p-5" style="text-align: center; margin-top:0px;">
         <div class="img mb-4" >
             <img src="images/person_2-min.jpg" alt="Image" class="img-fluid">
         </div>
@@ -128,13 +128,15 @@
                 <div class="col-12 mb-3">
                     <input type="email" class="form-control" name="pw" placeholder="비밀번호 변경">
                 </div>
+                <br>
                 <div class="col-12 mb-3">
                     <input type="text" class="form-control" name="email" placeholder="이메일 변경">
                 </div>
                 <!-- <div class="col-12 mb-3">
                     <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder=""></textarea>
                 </div> -->
-                <div class="col-12" style="text-align: center;">
+                
+                <div class="col-12" style="text-align: center; padding-top:30px;">
                     <input type="submit" value="회원정보 수정" class="btn btn-primary">
                 </div>
 

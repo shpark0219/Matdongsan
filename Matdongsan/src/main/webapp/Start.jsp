@@ -1,4 +1,5 @@
-<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!-- /*
 * Template Name: Property
 * Template Author: Untree.co
@@ -22,7 +23,7 @@
 
 
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">  
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
 	<link rel="stylesheet" href="css/tiny-slider.css">
 	<link rel="stylesheet" href="css/aos.css">
@@ -56,7 +57,6 @@
 	</nav>
 
 	<div class="hero">
-
 
 		<div class="hero-slide">
 			<div class="img overlay" style="background-image: url('images/hero_bg_3.jpg')"></div>
