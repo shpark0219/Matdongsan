@@ -163,7 +163,7 @@
 					<div id="layer_bg"> 
       						 <div id="popup" style=""> 
           						 	<h2>
-               						세부사항 선택
+               						상세 정보 선택
               					 		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
            							</h2>
           					 		<!--  컨텐츠 영역입니다.  /*내용*/ -->
@@ -171,39 +171,44 @@
 		     				style="text-align:center; height:0px; top:auto;">
 		     						
 		     						<div id="lo-ar-name">
-	     							<span><h1>지역명 or 아파트명</h1></span>		     						
+	     								<span><h1>지역명 or 아파트명</h1></span>		     						
 		     						</div>		     						
 		     						
 	     							<div>
 									<table class="select_check">
 										<tr>
 											<td>
-												<input type="checkbox" name="chk_info" value="" style="margin-left:80px">1층
-												<input type="checkbox" name="chk_info" value="" style="margin-left:60px">남향
-												<input type="checkbox" name="chk_info" value="" style="margin-left:60px">남서향
-												<input type="checkbox" name="chk_info" value="" style="margin-left:60px">남동향
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<input type="checkbox" name="chk_info" value="" style="margin-left:80px">1억 이하
-												<input type="checkbox" name="chk_info" value="" style="margin-left:20px">1억~3억
-												<input type="checkbox" name="chk_info" value="" style="margin-left:30px">3억~5억
-												<input type="checkbox" name="chk_info" value="" style="margin-left:50px">5억 이상
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<input type="checkbox" name="chk_info" value="" style="margin-left:80px">4년 이하
-												<input type="checkbox" name="chk_info" value="" style="margin-left:20px">10년 이하
-												<input type="checkbox" name="chk_info" value="" style="margin-left:20px">15년 이하
-												<input type="checkbox" name="chk_info" value="" style="margin-left:40px">15년 이상
+												<input type="radio" name="chk_info1" value="" style="margin-left:80px">1층
+												<input type="radio" name="chk_info1" value="" style="margin-left:60px">남향
+												<input type="radio" name="chk_info1" value="" style="margin-left:60px">남서향
+												<input type="radio" name="chk_info1" value="" style="margin-left:60px">남동향
 											</td>
 										</tr>
 									</table>
 									<br>
+									<table class="select_check">
+										<tr>
+											<td>
+												<input type="radio" name="chk_info2" value="" style="margin-left:80px">1억 이하
+												<input type="radio" name="chk_info2" value="" style="margin-left:20px">1억~3억
+												<input type="radio" name="chk_info2" value="" style="margin-left:30px">3억~5억
+												<input type="radio" name="chk_info2" value="" style="margin-left:50px">5억 이상
+											</td>
+										</tr>
+									</table>
 									<br>
+									<table class="select_check">
+										<tr>
+											<td>
+												<input type="radio" name="chk_info3" value="" style="margin-left:80px">4년 이하
+												<input type="radio" name="chk_info3" value="" style="margin-left:20px">10년 이하
+												<input type="radio" name="chk_info3" value="" style="margin-left:20px">15년 이하
+												<input type="radio" name="chk_info3" value="" style="margin-left:40px">15년 이상
+											</td>
+										</tr>
+									</table>
 									<br>
+									<br>									
 	     							</div>
 				       					<div>
 				       						<button id="sbtn" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button>
@@ -293,14 +298,22 @@
     <script type="text/javascript">
     $(document).ready(function() {
     	$("#sbtn").click(function() {
-    		let name=$("#searchInput").val();
+   		let name=$("#searchInput").val();
     		//console.log(name);
-    		$('#lo-ar-name').html('<span><h1>'+name+'</h1></span>');
-    		$("#layer_bg").show();
-    		$("#mask").fadeIn(100);
+    		if(!name){
+    			alert('검색할 정보를 입력하세요.');
+    		}else{    			
+    			$('#lo-ar-name').html('<span><h1>'+name+'</h1></span>');
+	    		$("#layer_bg").show();
+	    		$("#mask").fadeIn(100);
+    		}
     	});
 
     	$(".btn-close").on('click', function() {
+    		$("#searchInput").val('');
+    		$("input[name='chk_info1']").prop("checked",false); 
+    		$("input[name='chk_info2']").prop("checked",false); 
+    		$("input[name='chk_info3']").prop("checked",false); 
     		$("#layer_bg").hide();
     		$("#mask").fadeOut(100);
     	});
