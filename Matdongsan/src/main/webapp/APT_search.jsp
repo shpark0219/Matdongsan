@@ -146,7 +146,7 @@
 					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
 						<input id="searchInput" type="text" class="form-control px-4" placeholder="아파트명 또는 지역명을 검색해주세요.">
 						<!-- <button id="sbtn" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button> -->
-						<button id="sbtn" type="button" class="btn btn-primary">Q</button> 
+						<button id="sbtn1" type="button" class="btn btn-primary">Q</button> 
 						<br>
 						<br>
 					</form>
@@ -211,7 +211,7 @@
 									<br>									
 	     							</div>
 				       					<div>
-				       						<button id="sbtn" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button>
+				       						<button id="sbtn2" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button>
 				       					</div>
 							</form>
        					</div>
@@ -297,7 +297,7 @@
     <!-- popUp function() -->
     <script type="text/javascript">
     $(document).ready(function() {
-    	$("#sbtn").click(function() {
+    	$("#sbtn1").click(function() {
    		let name=$("#searchInput").val();
     		//console.log(name);
     		if(!name){
