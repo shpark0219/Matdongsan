@@ -507,7 +507,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="#" class="logo m-0 float-start">Matdongsan</a>
+					<a href="APT_search.jsp" class="logo m-0 float-start" style="text-decoration: none;">Matdongsan</a>
 					<a></a>
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
