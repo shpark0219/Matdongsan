@@ -207,8 +207,7 @@
 											</td>
 										</tr>
 									</table>
-									<br>
-									<br>									
+									<br>																		
 	     							</div>
 				       					<div>
 				       						<button id="sbtn2" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button>
