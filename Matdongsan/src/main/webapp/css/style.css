@@ -9692,7 +9692,6 @@ textarea {
     text-shadow: 4px 4px #34495e;
     color: #fff;
     font-size: clamp(1.6rem, 1.6vw, 1.6rem);
-    margin-bottom: 100px;
     font-weight: 600; }
   .hero .lead {
     color: #fff;
@@ -10327,7 +10326,7 @@ nav[aria-label="breadcrumb"] li:before {
   background: #efefef;
   font-size: 14px;
   color: #888;
-  padding:170px 0px 50px 0px;
+  padding:50px 0px 50px 0px;
   }
   .site-footer a {
     color: #777;
