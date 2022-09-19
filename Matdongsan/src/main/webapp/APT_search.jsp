@@ -38,7 +38,6 @@
     <link rel="stylesheet" href="css/join.css">
     
     <!-- popUp src, css -->
-    <script src="js/jquery-3.6.0.min.js"></script>
     <style type="text/css">
     	#layer_bg {
 			display: none;
