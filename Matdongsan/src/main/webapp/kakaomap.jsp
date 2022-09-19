@@ -38,11 +38,11 @@
 }
 
 #mapWrapper {
-	width: 75.5%;
+	width: 78.5%;
 	height: 400px;
 	z-index: 1;
 	margin-top: 70px;
-	margin-left: 225px;
+	margin-left: 175px;
 }
 
 #rvWrapper {
@@ -64,7 +64,7 @@
 #roadviewControl {
 	position: absolute;
 	top: 73px;
-	left: 228px;
+	left: 195px;
 	width: 40px;
 	height: 40px;
 	z-index: 1;
