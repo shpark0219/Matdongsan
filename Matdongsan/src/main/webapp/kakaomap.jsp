@@ -604,7 +604,7 @@
 
 	<div>
 	
-		<table class="table" style="width: 50%; margin: 130px 600px 0px 0px;"
+		<table class="table" style="width: 60%; margin: 130px 440px 0px 160px;"
 		align="right" ; z-index="1";>
 		  <thead>
 		    <tr>		      
@@ -612,14 +612,10 @@
 		      <th style="padding: 1.5rem">실거래 비교(최근 2년)</th>		      	      
 		    </tr>
 		  </thead>
-		  <tbody>
-		    <tr>		      
-		      <td>graph</td>
-		      <td>비교목록</td>
+		  <tbody>		    
 	      	<tr>
-	      	<tr>
-		      	<td>
-		      		<img src="https://assets.ltkcontent.com/images/line-graph-example.jpg" style="width: 300px; height: 250px;">
+		      	<td style="width: 50%;">
+		      		<div id="chart_div" style="width: 100%; height: 300px;"></div>
 		      	</td>	      	
 		      	<td>
 			      	<table class="table table-striped">
@@ -1312,5 +1308,51 @@
 			toggleMapWrapper(true, position);
 		}
 	</script>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['연월', '매매', '매매거래량'],
+          ['2021.01',  100,      400],
+          ['2021.02',  300,      500],
+          ['2021.03',  200,      800],
+          ['2021.04',  500,      700],
+          ['2021.05',  200,      200],
+          ['2021.06',  400,      600],
+          ['2021.07',  800,      700],
+          ['2021.08',  1000,      500],
+          ['2021.09',  1100,      400],
+          ['2021.10',  900,      300],
+          ['2021.011',  1000,      600],
+          ['2021.012',  1200,      700],          
+          ['2022.현재',  1170,      860]          
+        ]);
+
+        var options = {
+          title: '아파트 실거래 Graph',
+          hAxis: {title: '년도',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+      
+      	/* fullStack Option */
+      	/* var options_fullStacked = {
+              isStacked: 'relative',
+              height: 300,
+              legend: {position: 'top', maxLines: 3},
+              vAxis: {
+                minValue: 0,
+                ticks: [0, .3, .6, .9, 1]
+              }
+            }; */
+        
+    	</script>
 </html>
 </body>

@@ -94,6 +94,7 @@
 </script>
 <body>
 
+	<!-- 헤더 시작 -->
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
@@ -107,7 +108,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="#" class="logo m-0 float-start">Matdongsan</a>
+					<a href="APT_search.jsp" class="logo m-0 float-start">Matdongsan</a>
 					<a></a>
 
 
@@ -128,6 +129,7 @@
 			</div>
 		</div>
 	</nav>
+	<!-- 헤더끝 -->
 
 	<div class="hero">
 
