@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="favicon.png">
+	<link rel="shortcut icon" href="images/favicon.png">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -30,12 +30,12 @@
 		#a {
 			float: left;
 			margin-right: 10px;
-			width: 30%;			
+			width: 50%;			
 		}
 		
 		#b {
 			float: right;
-			width: 65%;
+			width: 45%;
 			margin: auto; 
 			
 		}
@@ -183,11 +183,17 @@
 		    </tr>
 		  </tbody>
 		</table>
-    </div>    
+		<div style="clear:both;"></div>
+		
+	    <div style="text-align: center;">
+	    	<button type="button" class="btn btn-primary" id="closeBtn">닫기</button>
+	    </div>    
+    </div>
+    
     
     <div style="clear:both;"></div>
 	<br>
-	<br>>
+	<br>
 
 
 	
@@ -259,7 +265,12 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/esc.js"></script>
-    <script type="text/javascript">
+    
+   <script type="text/javascript">
+	   $('#closeBtn').on('click', function() {
+			$('#d').attr('style', 'display:none !important');
+		});
+   </script>
    
   </body>
   </html>

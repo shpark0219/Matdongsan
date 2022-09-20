@@ -79,6 +79,11 @@
 			</div>
 		</div>
 	</div>
+	<div style="clear: both;"></div>
+	<br>
+	<br>
+	<br>
+	<br>
 
 	<div class="site-footer">
 		<div class="container">

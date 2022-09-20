@@ -74,6 +74,13 @@
 		#lo-ar-name {
 			margin-bottom: 50px;		
 		}
+		
+		.ui-autocomplete {
+		   max-height: 400px;
+		   overflow-y: auto; /* prevent horizontal scrollbar */
+		   overflow-x: hidden; /* add padding to account for vertical scrollbar */
+		   z-index: 1000 !important;
+		}
     </style>
 
 </head>
@@ -225,6 +232,11 @@
 
 
 	</div>
+	<div style="clear: both;"></div>
+	<br>
+	<br>
+	<br>
+	<br>
 	
 <!-- footer -->
 
