@@ -1,12 +1,12 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 
 import com.smhrd.domain.Member;
 import com.smhrd.domain.MemberDAO;
@@ -23,15 +23,12 @@ public class LoginCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// 1. 파라미터 수집
-		String id = request.getParameter("LoginId");
-		String pw = request.getParameter("LoginPw");
+		String user_id = request.getParameter("LoginId");
+		String user_pw = request.getParameter("LoginPw");
 		
-		System.out.println(id);
-		System.out.println(pw);
 		
 		// 2. 수집된 데이터를 Member 객체에 담기
-		Member member = new Member(id, pw);
-		
+		Member member = new Member(user_id, user_pw);
 		// 3. MemberMapper.xml에서 SQL문 만들고 오기
 		
 		// 4. MemberDAO에 가서 메소드 만들고 오기
@@ -39,14 +36,13 @@ public class LoginCon extends HttpServlet {
 		// 5. MemberDAO 객체 생성, 메소드 호출
 		MemberDAO dao = new MemberDAO();
 		Member loginMember = dao.selectMember(member);
-		System.out.println(loginMember);
 		
 		// 6. 명령 후 처리
 		if(loginMember != null) {
 			// 세션에 로그인 정보 저장
 			// 1. 세션 객체 생성
 			HttpSession session = request.getSession();
-			session.setAttribute("selectMember", loginMember);
+			session.setAttribute("loginMember", loginMember);
 			response.sendRedirect("APT_search.jsp");
 			// main.jsp로 이동
 		}else {

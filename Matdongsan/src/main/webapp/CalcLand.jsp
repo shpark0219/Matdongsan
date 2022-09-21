@@ -9,30 +9,31 @@
 .tg {
 	border-collapse: collapse;
 	border-spacing: 100;
+	height:450px;
 }
 
 .tg td {
-	border-color: white;
-	border-style: solid;
-	border-width: 1px;
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	color: white;
-	overflow: hidden;
-	padding: 10px 5px;
-	word-break: normal;
+   border-color: #c8d6e5;
+   border-style: solid;
+   border-width: 1px;
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   color: #545454;
+   overflow: hidden;
+   padding: 10px 5px;
+   word-break: normal;
 }
 
 .tg th {
-	border-color: white;
-	border-style: solid;
-	border-width: 1px;
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	font-weight: normal;
-	overflow: hidden;
-	padding: 10px 5px;
-	word-break: normal;
+   border-color: #c8d6e5;
+   border-style: solid;
+   border-width: 1px;
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   font-weight: normal;
+   overflow: hidden;
+   padding: 10px 5px;
+   word-break: normal;
 }
 
 .tg .tg-1vaz {
@@ -43,23 +44,30 @@
 
 .tg .tg-baqh {
 	text-align: center;
-	vertical-align: top
+   vertical-align: bottom
+   display: block;margin: 4px 79px 0 10px;
+   background: rgba(255,255,255,0.98);
+   color:#353b48;
 }
 
 .tg .tg-cixx {
-	/* background-color: #E2EFDA; */
+	background-color: #E2EFDA;
 	text-align: center;
-	vertical-align: bottom
+	vertical-align: top
 }
 
 .tg .tg-8d8j {
-	text-align: center;
-	vertical-align: bottom
+   text-align: center;
+   vertical-align: bottom
+   display: block;margin: 4px 79px 0 10px;
+   background: rgba(255,255,255,0.98)
 }
 
 .tg .tg-7zrl {
-	text-align: left;
-	vertical-align: bottom
+text-align: center;
+   vertical-align: bottom
+   display: block;margin: 4px 79px 0 10px;
+   background: rgba(255,255,255,0.98)
 }
 
 .tg2 {
@@ -68,7 +76,7 @@
 }
 
 .tg2 td {
-	border-color: white;
+	border-color: #c8d6e5;
 	border-style: solid;
 	border-width: 1px;
 	font-family: Arial, sans-serif;
@@ -79,7 +87,7 @@
 }
 
 .tg2 th {
-	border-color: white;
+	border-color: #c8d6e5;;
 	border-style: solid;
 	border-width: 1px;
 	font-family: Arial, sans-serif;
@@ -98,6 +106,8 @@
 }
 
 .tg2 .tg-7zrl {
+	background-color: white;
+	border-color: #c8d6e5;;
 	text-align: left;
 	vertical-align: bottom
 }
@@ -109,7 +119,7 @@
 }
 
 .tg_result td {
-	border-color: white;
+	border-color: #c8d6e5;;
 	border-style: solid;
 	border-width: 1px;
 	font-family: Arial, sans-serif;
@@ -120,7 +130,7 @@
 }
 
 .tg_result th {
-	border-color:white;
+	border-color:#c8d6e5;;
 	border-style: solid;
 	border-width: 1px;
 	font-family: Arial, sans-serif;
@@ -134,11 +144,11 @@
 .tg_result .tg_ltv {
 	background-color: #DBDBDB;
 	text-align: center;
-	vertical-align: bottom
+	vertical-align: bottom;
+	color : #2f3640;
 }
 
 .tg_result .tg-jfmb {
-	background-color:rgba(255, 255, 255, 0.4);
 	color: #FFF;
 	font-weight: bold;
 	text-align: center;
@@ -146,7 +156,6 @@
 }
 
 .tg_result .tg-39yz {
-	background-color:rgba(255, 255, 255, 0.4);
 	color: #FFF;
 	font-weight: bold;
 	text-align: center;
@@ -154,13 +163,37 @@
 }
 
 .tg_result .tg-7zrl {
-	text-align: left;
+	text-align: center;
 	vertical-align: bottom
 }
 
 .tg_result .tg-8d8j {
 	text-align: center;
 	vertical-align: bottom
+}
+
+.InfoBox {
+    position:relative;
+    background:#f5f6fa;
+    width:650px;
+    height:200px;
+    text-align: center;
+    padding: 12px;
+    color:black;
+    left:5px;
+    top:0px;
+    }
+
+.InfoBox:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    border-width:0 16px 16px 0; 
+    border-style:solid;
+    border-color: #FFFFFF #FFFFFF #718093 #718093; 
+    background: #718093; 
+    display:block; width:0;   
 }
 </style>
 <!-- 헤더css -->
@@ -225,13 +258,12 @@
 	<!-- 헤더끝 -->
 
 	<div class="hero page-inner overlay"
-		style="background-image: url('images/hero_bg_1.jpg'); height: 1200px;">
-
+		style="background-image: url('images/hero_bg_1.jpg'); height: 1200px; overflow: overlay;">
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
-				<div class="col-lg-9 text-center mt-5" style="margin-top:66px; padding-top:115px; width:85%">
-					<!-- <h1 class="heading" data-aos="fade-up">DSR계산</h1> -->
-	<div style="float: right; margin-top:15px">
+				<div class="col-lg-9 text-center mt-5" style="margin-top:66px; padding-top:115px; width:85%;">
+				<h1 class="heading" data-aos="fade-up" style="opacity: 1; transform: translateZ(0); margin-top:50px; ">부동산 계산기</h1>
+	<div style="float: right; margin-top:35px">
 		<table class="tg">
 			<thead>
 				<tr>
@@ -357,35 +389,42 @@
 				</tr>
 			</tbody>
 		</table>
+		<h6 style="color:white; font-size:13px; margin-top:10px; float:left;">* 서민실수요자 : 부부합산소득 연 7천만원 미만(생애최초구입은 연 8천만원 미만)의 무주택자</h6>
 		<br><br><br>
-		
-			<h5 style="color:#FFF;"> ※ LTV 와 DTI를 계산해서 어쩌고 저쩌고</h5>
+		<div class="InfoBox">
+			<br>
+			<p>※ 부동산 계산기란?</p>
+			<p>LTV와 DTI의 결과값을 비교하여 더 합리적으로 낮은 대출금액을 보여줍니다.<p>
+			<p>정부가 지정한 투기과열지구 및 투기지역, 조정대상지역, 조정대상외 수도권, 그외 지역에 따라<br> 
+			LTV, DTI에 대한 비율을 강화하고 있습니다. 서민 실수요자, 무주택자, 1주택, 2주택에 따라서<br>
+			LTV, DTI 비율이 다르며 고가주택(시가9억원 초과) 에 따라서도 LTV, DTI 비율을 다릅니다.</p>
+		</div>
 		
 	</div>
-	<div style="float: left;">
+	<div style="float: left; margin-top:35px;">
 		<table class="tg2">
 			<thead>
 				<tr>
 					<th class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">대출금리</span></th>
-					<th class="tg-7zrl"><input type="text" id="a1" style="background-color:rgba(255, 255, 255, 0.5)"></th>
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">대출금리</span></th>
+					<th class="tg-7zrl"><input type="text" id="a1" style="background-color:rgba(255, 255, 255, 0.5); border-color:white;"></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">대출기간(년)</span></td>
-					<td class="tg-7zrl"><input type="text" id="a2" style="background-color:rgba(255, 255, 255, 0.5)"></td>
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">대출기간(년)</span></td>
+					<td class="tg-7zrl"><input type="text" id="a2" style="background-color:rgba(255, 255, 255, 0.5); border-color:white;"></td>
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">주택가액(시가)</span></td>
-					<td class="tg-7zrl"><input type="text" id="a3" style="background-color:rgba(255, 255, 255, 0.5)"></td>
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">주택가액(시가)</span></td>
+					<td class="tg-7zrl"><input type="text" id="a3" style="background-color:rgba(255, 255, 255, 0.5); border-color:white;"></td>
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">주택구입지역</span></td>
-					<td class="tg-7zrl"><select name="local" id="local" size="1" style="background-color:rgba(255, 255, 255, 0.5)">
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">주택구입지역</span></td>
+					<td class="tg-7zrl"><select name="local" id="local" size="1" style="background-color:rgba(255, 255, 255, 0.5); border-color:#545454;">
 							<option value="" selected></option>
 							<option value="투기과열지구 투기지역">투기과열지구 투기지역</option>
 							<option value="조정대상지역">조정대상지역</option>
@@ -395,8 +434,8 @@
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">주택보유여부</span></td>
-					<td class="tg-7zrl"><select name="home" id="home" size="1" style="background-color:rgba(255, 255, 255, 0.5)">
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">주택보유여부</span></td>
+					<td class="tg-7zrl"><select name="home" id="home" size="1" style="background-color:rgba(255, 255, 255, 0.5); border-color:#545454;">
 							<option value="" selected></option>
 							<option value="무주택">무주택</option>
 							<option value="1주택">1주택</option>
@@ -405,14 +444,14 @@
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">연소득(세전)</span></td>
-					<td class="tg-7zrl"><input type="text" id="a4" style="background-color:rgba(255, 255, 255, 0.5)"></td>
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">연소득(세전)</span></td>
+					<td class="tg-7zrl"><input type="text" id="a4" style="background-color:rgba(255, 255, 255, 0.5); border-color:white;"></td>
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">주택시가
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">주택시가
 							9억원</span></td>
-					<td class="tg-7zrl"><select name="buy" id="buy" size="1" style="background-color:rgba(255, 255, 255, 0.5)">
+					<td class="tg-7zrl"><select name="buy" id="buy" size="1" style="background-color:rgba(255, 255, 255, 0.5); border-color:#545454;">
 							<option value="" selected></option>
 							<option value="이상">이상</option>
 							<option value="이하">이하</option>
@@ -420,9 +459,9 @@
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">주거구분</span></td>
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">주거구분</span></td>
 					<td class="tg-7zrl"><select name="hometype" id="hometype"
-						size="1" style="background-color:rgba(255, 255, 255, 0.5)">
+						size="1" style="background-color:rgba(255, 255, 255, 0.5); border-color:#545454;">
 							<option value="" selected></option>
 							<option value="아파트">아파트</option>
 							<option value="그외">그외</option>
@@ -430,8 +469,8 @@
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">거주목적</span></td>
-					<td class="tg-7zrl"><select name="purpo" id="purpo" size="1" style="background-color:rgba(255, 255, 255, 0.5)">
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">거주목적</span></td>
+					<td class="tg-7zrl"><select name="purpo" id="purpo" size="1" style="background-color:rgba(255, 255, 255, 0.5); border-color:#545454;">
 							<option value="" selected></option>
 							<option value="실거주">실거주</option>
 							<option value="그외">그외</option>
@@ -439,15 +478,15 @@
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">기존담보대출
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">기존담보대출
 							월상환액</span></td>
-					<td class="tg-7zrl"><input type="text" id="a5" style="background-color:rgba(255, 255, 255, 0.5)"></td>
+					<td class="tg-7zrl"><input type="text" id="a5" style="background-color:rgba(255, 255, 255, 0.5); border-color:white;"></td>
 				</tr>
 				<tr>
 					<td class="tg-8hlh"><span
-						style="font-weight: normal; color: black; background-color: #E2EFDA">그외
+						style="font-weight: normal; color: #353b48; background-color: #E2EFDA">그외
 							대출 월이자액</span></td>
-					<td class="tg-7zrl"><input type="text" id="a6" style="background-color:rgba(255, 255, 255, 0.5)"></td>
+					<td class="tg-7zrl"><input type="text" id="a6" style="background-color:rgba(255, 255, 255, 0.5); border-color:white;"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -455,7 +494,7 @@
 		
 <!-- 결과값 테이블  -->
 	<div>
-		<table class="tg_result" style="table-layout: fixed; width: 303px">
+		<table class="tg_result" style="table-layout: fixed; width: 350px">
 			<colgroup>
 				<col style="width: 149.005952px">
 				<col style="width: 154.005952px">
@@ -464,28 +503,28 @@
 				<tr>
 					<th class="tg_ltv"><span
 						style="font-weight: normal; background-color: #DBDBDB">LTV</span></th>
-					<th class="tg-7zrl"><span style="font-weight: normal" id="ltv"></span></th>
+					<th class="tg-7zrl"><span style="font-weight: bold; color: #FFF; " id="ltv"></span></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td class="tg_ltv"><span
 						style="font-weight: normal; background-color: #DBDBDB">DTI</span></td>
-					<td class="tg-8d8j"><span style="font-weight: normal" id="dti"></span></td>
+					<td class="tg-8d8j"><span style="font-weight: bold; color: #FFF;" id="dti"></span></td>
 				</tr>
 				<tr>
 					<td class="tg_ltv"><span
 						style="font-weight: normal; background-color: #DBDBDB">대출가능금액</span></td>
 					<td class="tg-jfmb"><span
 						style="font-weight: bold; color: #FFF;"
-						id="loan">-</span></td>
+						id="loan"></span></td>
 				</tr>
 				<tr>
 					<td class="tg_ltv"><span
 						style="font-weight: normal; background-color: #DBDBDB">월
 							상환액(원리금균등)</span></td>
 					<td class="tg-39yz"><span
-						style="font-weight: bold; color: #FFF; background-color: #FCE4D6;"
+						style="font-weight: bold; color: #FFF;"
 						id="monthloan"></span></td>
 				</tr>
 			</tbody>
@@ -495,7 +534,6 @@
 	<div>
 		<button onclick="Calcltv()" style=" color: #fff; background-color: #005555; 
 		 border-radius:10px; font-size: medium;">계산하기</button>
-	
 	</div>
 	</div>
 				</div>
@@ -504,6 +542,76 @@
 	</div>
 	<div id="aa"></div>
 	<div id="bb"></div>
+
+	<div style="clear: both;"></div>	
+	
+	<!-- footer -->
+
+	<div class="site-footer">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3>Contact</h3>
+						<address>전라남도 순천시 중앙로 260 5층 스마트인재개발원</address>
+						<ul class="list-unstyled links">
+							<li><a href="tel://11234567890">061) 123-4567</a></li>
+							<li><a href="mailto:info@mydomain.com">Matdongsan@gmail.com</a></li>
+						</ul>
+					</div>
+					<!-- /.widget -->
+				</div>
+				<!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3>Times</h3>
+						<ul class="list-unstyled links">
+							<li><a href="#">월 ~ 금 9:00 AM - 18:00 PM</a></li>
+						</ul>
+						<ul class="list-unstyled social">
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+							<li><a href="#"><span class="icon-pinterest"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+						</ul>
+					</div>
+					<!-- /.widget -->
+				</div>
+				<!-- /.col-lg-4 -->
+			</div>
+			<!-- /.row -->
+
+			<div class="row mt-5">
+				<div class="col-12 text-center">
+					<!-- 
+				**==========
+				NOTE: 
+				Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+				**==========
+			  -->
+
+					<p>
+						Copyright &copy;
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						. All Rights Reserved. &mdash; Designed with love by <a
+							href="https://untree.co">Untree.co</a>
+						<!-- License information: https://untree.co/license/ -->
+						| 개인정보처리방침
+					</p>
+
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.site-footer -->
+	<!-- footer -->
+	
 	<script type="text/javascript">
       function Calcltv() {
          var loanrate = parseFloat(document.querySelector('#a1').value);
@@ -634,72 +742,7 @@
 		}
       }
    </script>
-<!-- footer -->
 
-	<div class="site-footer">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3>Contact</h3>
-						<address>전라남도 순천시 중앙로 260 5층 스마트인재개발원</address>
-						<ul class="list-unstyled links">
-							<li><a href="tel://11234567890">061) 123-4567</a></li>
-							<li><a href="mailto:info@mydomain.com">Matdongsan@gmail.com</a></li>
-						</ul>
-					</div>
-					<!-- /.widget -->
-				</div>
-				<!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3>Times</h3>
-						<ul class="list-unstyled links">
-							<li><a href="#">월 ~ 금 9:00 AM - 18:00 PM</a></li>
-						</ul>
-						<ul class="list-unstyled social">
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-							<li><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li><a href="#"><span class="icon-pinterest"></span></a></li>
-							<li><a href="#"><span class="icon-dribbble"></span></a></li>
-						</ul>
-					</div>
-					<!-- /.widget -->
-				</div>
-				<!-- /.col-lg-4 -->
-			</div>
-			<!-- /.row -->
-
-			<div class="row mt-5">
-				<div class="col-12 text-center">
-					<!-- 
-				**==========
-				NOTE: 
-				Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-				**==========
-			  -->
-
-					<p>
-						Copyright &copy;
-						<script>
-							document.write(new Date().getFullYear());
-						</script>
-						. All Rights Reserved. &mdash; Designed with love by <a
-							href="https://untree.co">Untree.co</a>
-						<!-- License information: https://untree.co/license/ -->
-						| 개인정보처리방침
-					</p>
-
-				</div>
-			</div>
-		</div>
-		<!-- /.container -->
-	</div>
-	<!-- /.site-footer -->
-	<!-- footer -->
 
 	<script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

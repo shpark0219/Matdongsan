@@ -1,66 +1,71 @@
 package com.smhrd.domain;
 // 테이블 이름과 VO 객체 이름 일치 시키기
 public class Member {
-	// 접근제한자
-	private String no;
-	private String id;
-	private String pw;
-	private String email;
-		
-	 
-	public Member(String no, String id, String pw, String email) {
+   // 접근제한자
+	private int user_no;
+	private String user_id;
+	private String user_pw;
+	private String user_email;
+	
+	public Member(int user_no, String user_id, String user_pw, String user_email) {
 		super();
-		this.no = no;
-		this.id = id;
-		this.pw = pw;
-		this.email = email;
+		this.user_no = user_no;
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+		this.user_email = user_email;
 	}
- 
-	public Member(String id, String pw) {
+	public Member(String user_id, String user_pw, String user_email) {
 		super();
-		this.id = id;
-		this.pw = pw;
+		this.user_id = user_id;
+		this.user_pw = user_pw;
+		this.user_email = user_email;
 	}
-		
-	public Member(String id, String pw, String email) {
+	public Member(int user_no, String user_id, String user_email) {
 		super();
-		this.id = id;
-		this.pw = pw;
-		this.email = email;
+		this.user_no = user_no;
+		this.user_id = user_id;
+		this.user_email = user_email;
 	}
 
-	public String getNo() {
-		return no;
+	public Member(String user_email) {
+		super();
+		this.user_email = user_email;
 	}
-
-	public void setNo(String no) {
-		this.no = no;
+	public Member(String user_id, String user_pw) {
+		super();
+		this.user_id = user_id;
+		this.user_pw = user_pw;
 	}
-
-	public String getId() {
-		return id;
+	public Member() {
+		super();
 	}
-
-	public void setId(String id) {
-		this.id = id;
+	public int getUser_no() {
+		return user_no;
 	}
-
-	public String getPw() {
-		return pw;
+	public void setUser_no(int user_no) {
+		this.user_no = user_no;
 	}
-
-	public void setPw(String pw) {
-		this.pw = pw;
+	public String getUser_id() {
+		return user_id;
 	}
-
-	public String getEmail() {
-		return email;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public String getUser_pw() {
+		return user_pw;
 	}
-
+	public void setUser_pw(String user_pw) {
+		this.user_pw = user_pw;
+	}
+	public String getUser_email() {
+		return user_email;
+	}
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
+	}
+	
+	
+	
 	
 	
 	

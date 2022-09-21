@@ -1,5 +1,11 @@
+<%@page import="com.smhrd.domain.BMDTO"%>
+<%@page import="com.smhrd.domain.SGDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.domain.MemberDAO"%>
+<%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,6 +63,9 @@
 	</style>
 </head>
 <body>
+	<%
+		Member loginMember = (Member)session.getAttribute("loginMember");
+	%>
 
 	<!-- 헤더 시작 -->
 	<div class="site-mobile-menu site-navbar-target">
@@ -111,9 +120,10 @@
             <img src="images/person_2-min.jpg" alt="Image" class="img-fluid">
         </div>
         <div class="text">
-            <h3 class="mb-0" name="id">test 123</h3>
-            <div class="meta mb-3" name="email">test123@gmail.com</div>
-            <p>test123님의 마이페이지 입니다.</p>
+            <h3 class="mb-0" name="id"><%= loginMember.getUser_id() %></h3>
+            
+            <div class="meta mb-3" name="email"><%= loginMember.getUser_email() %></div>
+            <p><%= loginMember.getUser_email() %>님의 마이페이지 입니다.</p>
         </div>
     </div>
 
@@ -121,14 +131,14 @@
     <br>
     <br>
     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-        <form action="#" method="post">
+        <form action="UpdateCon" method="post">
             <div class="row" id="a">
                 <div class="col-12 mb-3">
-                    <input type="email" class="form-control" name="pw" placeholder="비밀번호 변경">
+                    <input type="text" class="form-control" name="UpdatePw" placeholder="비밀번호 변경">
                 </div>
                 <br>
                 <div class="col-12 mb-3">
-                    <input type="text" class="form-control" name="email" placeholder="이메일 변경">
+                    <input type="text" class="form-control" name="UpdateEmail" placeholder="이메일 변경">
                 </div>
                 <!-- <div class="col-12 mb-3">
                     <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder=""></textarea>
@@ -141,53 +151,103 @@
             </div>
         </form>
             
-            <div class="row" id="b">
-				<div class="col-12" style="text-align: center;">					
-                   <span><input type="sumit" value="검색한 아파트 목록" id="c1" class="btn btn-primary" onclick="lookBtn()" style="margin-top:0px;"></span>
-                   <br>                                    
-                   <span><input type="sumit" value="내 건의사항 목록" id="c2" class="btn btn-primary" onclick="lookBtn()"></span>                                     
-                </div>                         
-            </div>
+		<div class="row" id="b">
+		         <div class="col-12" style="text-align: center;">
+		            <span><input type="submit" value="내 건의사항 목록" id="c"
+		               class="btn btn-primary" onclick="lookBtn()"
+		               style="margin-top: 0px;"></span>
+		         </div>
+		      </div>
+		      <div class="row" id="b">
+		         <div class="col-12" style="text-align: center;">
+		            <span><input type="submit" value="검색한 아파트 목록" id="c2"
+		               class="btn btn-primary" onclick="look()"></span>
+		         </div>
+		      </div>
             
     </div>
     <div style="clear:both;"></div>
-    
+		<% 
+		MemberDAO dao = new MemberDAO();
+		int user_no = loginMember.getUser_no(); 
+		List<SGDTO> SGlist = dao.selectSG(user_no);
+		List<BMDTO> BMlist = dao.selectBM(user_no);
+		%>
+
+   
     <div class="d-block agent-box p-5"  id="d"  style="display: none !important;">    
     	<table class="table" >
-    	<h2>목록표</h2>
+    	<h2>건의사항 목록</h2>
 		  <thead>
 		    <tr>
-		      <th scope="col">목차</th>
-		      <th scope="col">ID</th>
-		      <th scope="col">제목</th>
-		      <th scope="col">내용</th>
+		      <th scope="col">Number</th>
+		      <th scope="col">Email</th>
+		      <th scope="col">Suggestion</th>
+		      <th scope="col">Content</th>
+		      <th scope="col">Delete</th>
 		    </tr>
 		  </thead>
 		  <tbody>
+			<%
+			int sgnum =0;
+			for(SGDTO sg : SGlist){ 		
+				sgnum++;
+			%>		  
 		    <tr>
-		      <th scope="row">1</th>
-		      <td>#</td>
-		      <td>#</td>
-		      <td>#</td>
+		      <th scope="row"><%=sgnum %></th>
+		      <td><%= sg.getSg_email() %></td>
+		      <td><%= sg.getSg_title() %></td>
+		      <td><%= sg.getSg_content() %></td>
+		      <td><a href="DeleteCon?sg_no=<%=sg.getSg_no()%>">삭제</a></td>
 		    </tr>
-		    <tr>
-		      <th scope="row">2</th>
-		      <td>#</td>
-		      <td>#</td>
-		      <td>#</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">3</th>
-		      <td colspan="2">#</td>
-		      <td>#</td>
-		    </tr>
+		    <%} %>	
+		    
 		  </tbody>
 		</table>
-		<div style="clear:both;"></div>
-		
-	    <div style="text-align: center;">
-	    	<button type="button" class="btn btn-primary" id="closeBtn">닫기</button>
-	    </div>    
+    <br>
+    	<!-- 닫기 버튼 -->
+      <div style="text-align: center;">
+          <button type="button" class="btn btn-primary" id="closeBtn1">닫기</button>
+       </div>
+    </div>     
+    
+    <div style="clear:both;"></div>
+	<br>
+	<br>>
+    <div class="d-block agent-box p-5"  id="d2"  style="display: none !important;">    
+    	<table class="table" >
+    	<h2>즐겨찾기 목록</h2>
+		  <thead>
+		    <tr>
+		      <th scope="col">Number</th>
+		      <th scope="col">NAME</th>
+		      <th scope="col">AREA</th>
+		      <th scope="col">PRICE</th>
+		      <th scope="col">Delete</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			<%
+			int bmnum =0;
+			for(BMDTO bm : BMlist){ 		
+				bmnum++;
+			%>		  
+		    <tr>
+		      <th scope="row"><%=bmnum %></th>
+		      <td><a href="SelectLand?aptNo=<%=bm.getApt_no() %>"><%= bm.getApt_name() %></a></td>
+		      <td><%= bm.getApt_area() %></td>
+		      <td><%= bm.getApt_price() %></td>
+		      <td><a href="DeleteBM?bm_no=<%=bm.getBm_no()%>">삭제</a></td>
+		    </tr>
+		    <%} %>	
+		    
+		  </tbody>
+		</table>
+          <br>
+      <!-- 닫기 버튼 -->
+      <div style="text-align: center;">
+          <button type="button" class="btn btn-primary" id="closeBtn2">닫기</button>
+       </div>
     </div>
     
     
@@ -196,7 +256,7 @@
 	<br>
 
 
-	
+	<!-- footer -->
 
 	<div class="site-footer">
 		<div class="container">
@@ -266,10 +326,20 @@
     <script src="js/custom.js"></script>
     <script src="js/esc.js"></script>
     
+    <script type="text/javascript">
+	function look(){
+		$('#d2').css('display','block');
+	};
+	</script>
+    
    <script type="text/javascript">
-	   $('#closeBtn').on('click', function() {
-			$('#d').attr('style', 'display:none !important');
-		});
+      $('#closeBtn1').on('click', function() {
+         $('#d').attr('style', 'display:none !important');
+      });
+      
+      $('#closeBtn2').on('click', function() {
+          $('#d2').attr('style', 'display:none !important');
+       });
    </script>
    
   </body>

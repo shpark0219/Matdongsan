@@ -142,89 +142,29 @@
 
 
 		<div class="hero-slide">
-			<div class="img overlay" style="background-image: url('images/hero_bg_3.jpg')"></div>
-			<div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
-			<div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
+			<div class="img overlay"
+				style="background-image: url('images/hero_bg_3.jpg')"></div>
+			<div class="img overlay"
+				style="background-image: url('images/hero_bg_2.jpg')"></div>
+			<div class="img overlay"
+				style="background-image: url('images/hero_bg_1.jpg')"></div>
 		</div>
 
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-lg-9 text-center">
-					<h1 class="heading" data-aos="fade-up">"Matdongsan"은 사용자가 보기 쉽도록 아파트/주택의 매매 혹은 전/월세 실거래가 <br> 정보  및 유용한 지역 정보를 담고있는 사이트입니다.</h1>
-					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-						<input id="searchInput" type="text" class="form-control px-4" placeholder="아파트명 또는 지역명을 검색해주세요.">
-						<!-- <button id="sbtn" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button> -->
-						<button id="sbtn1" type="button" class="btn btn-primary">Q</button> 
-						<br>
-						<br>
+					<h1 class="heading" data-aos="fade-up">당신은 어떤 집을 마련하고 싶으신가요 ? </h1>
+					</h1>
+					<form action="SearchCon"
+						class="narrow-w form-search d-flex align-items-stretch mb-3"
+						data-aos="fade-up" data-aos-delay="200">
+						<input id="searchInput" name="SearchInput" type="text"
+							class="form-control px-4" placeholder="아파트명 또는 지역명을 검색해주세요.">
+						<button type="submit" class="btn btn-primary">Q</button>
+						<br> <br>
 					</form>
 
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					
-					<!-- check-box popUp body-->
-					<div id="mask"></div>
-					<div id="layer_bg"> 
-      						 <div id="popup" style=""> 
-          						 	<h2>
-               						상세 정보 선택
-              					 		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           							</h2>
-          					 		<!--  컨텐츠 영역입니다.  /*내용*/ -->
-							<form action="doJoin" method="POST" class="joinForm_check" onsubmit="DoJoinForm__submit(this); return false;"
-		     				style="text-align:center; height:0px; top:auto;">
-		     						
-		     						<div id="lo-ar-name">
-	     								<span><h1>지역명 or 아파트명</h1></span>		     						
-		     						</div>		     						
-		     						
-	     							<div>
-									<table class="select_check">
-										<tr>
-											<td>
-												<input type="radio" name="chk_info1" value="" style="margin-left:80px">1층
-												<input type="radio" name="chk_info1" value="" style="margin-left:60px">남향
-												<input type="radio" name="chk_info1" value="" style="margin-left:60px">남서향
-												<input type="radio" name="chk_info1" value="" style="margin-left:60px">남동향
-											</td>
-										</tr>
-									</table>
-									<br>
-									<table class="select_check">
-										<tr>
-											<td>
-												<input type="radio" name="chk_info2" value="" style="margin-left:80px">1억 이하
-												<input type="radio" name="chk_info2" value="" style="margin-left:20px">1억~3억
-												<input type="radio" name="chk_info2" value="" style="margin-left:30px">3억~5억
-												<input type="radio" name="chk_info2" value="" style="margin-left:50px">5억 이상
-											</td>
-										</tr>
-									</table>
-									<br>
-									<table class="select_check">
-										<tr>
-											<td>
-												<input type="radio" name="chk_info3" value="" style="margin-left:80px">4년 이하
-												<input type="radio" name="chk_info3" value="" style="margin-left:20px">10년 이하
-												<input type="radio" name="chk_info3" value="" style="margin-left:20px">15년 이하
-												<input type="radio" name="chk_info3" value="" style="margin-left:40px">15년 이상
-											</td>
-										</tr>
-									</table>
-									<br>																		
-	     							</div>
-				       					<div>
-				       						<button id="sbtn2" type="button" class="btn btn-primary" onClick="location.href='kakaomap.jsp'">Q</button>
-				       					</div>
-							</form>
-       					</div>
-   					</div>
-					<!-- check-box popUp end -->
-					
+
 				</div>
 			</div>
 		</div>

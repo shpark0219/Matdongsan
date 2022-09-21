@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,13 +24,13 @@ public class JoinCon extends HttpServlet {
 		
 		// 1. 파라미터 수집	
 		
-		String id = request.getParameter("JoinId");
-		String pw = request.getParameter("JoinPw");
-		String pw2 = request.getParameter("JoinPw2");
-		String email = request.getParameter("JoinEmail");
+		String user_id = request.getParameter("JoinId");
+		String user_pw = request.getParameter("JoinPw");
+		String user_pw2 = request.getParameter("JoinPw2");
+		String user_email = request.getParameter("JoinEmail");
 			
 		// 2. 수집된 데이터를 Member객체에 담기		
-		Member member = new Member(id, pw, email);
+		Member member = new Member(user_id, user_pw, user_email);
 		
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.insertMember(member);
@@ -36,8 +38,10 @@ public class JoinCon extends HttpServlet {
 		
 		// 6. 명령 후 처리
 		if(cnt>0) {
+			RequestDispatcher rd = request.getRequestDispatcher("Confirm.jsp");
 			request.setAttribute("JoinInfo", member);
-			response.sendRedirect("Confirm.jsp");
+			rd.forward(request, response);
+//			response.sendRedirect("Confirm.jsp");
 			
 //			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
 //			rd.forward(request, response);
@@ -45,24 +49,7 @@ public class JoinCon extends HttpServlet {
 		}else {
 			response.sendRedirect("login.jsp");
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
 
 }
