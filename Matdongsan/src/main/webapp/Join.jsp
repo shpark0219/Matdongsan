@@ -95,7 +95,7 @@
 			</div>
 			<br> 
 			
-			<input type="button" class="btn" value="J O I N" />			
+			<input type="button" class="btn" value="J O I N" onclick="location.href='Confirm.jsp'"/>			
        		<input type="button" onClick="location.href='Start.jsp'" class="btn" value="J O I N C A N C L E" style="font-size: inherit;"/>
 		</form>
 

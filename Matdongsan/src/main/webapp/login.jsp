@@ -82,7 +82,7 @@
         </div>
        <br>
        
-        <input type="submit" class="btn" value="L O G I N" />
+        <input type="button" class="btn" value="L O G I N" onclick="location.href='APT_search.jsp'"/>
         <input type="button" onClick="location.href='Start.jsp'" class="btn" value="L O G I N C A N C L E" style="font-size: inherit;"/>
       </form>
 
