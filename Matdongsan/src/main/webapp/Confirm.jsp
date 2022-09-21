@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	<title>Matdongsan</title>
 
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,6 +32,7 @@
 </head>
 <body>
 
+	<!-- 헤더 시작 -->
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
@@ -46,7 +47,7 @@
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
 					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
-					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+					
 						<span></span>
 					</a>
 
@@ -54,6 +55,7 @@
 			</div>
 		</div>
 	</nav>
+	<!-- 헤더끝 -->
 
 	<div class="hero">
 
