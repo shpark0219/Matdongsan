@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Matdongsan</title>
 <style type="text/css">
 .tg {
 	border-collapse: collapse;
@@ -167,7 +167,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="favicon.png">
+<link rel="shortcut icon" href="images/property.png">
 
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -201,7 +201,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="APT_search.jsp" class="logo m-0 float-start">Matdongsan</a>
+					<a href="APT_search.jsp" class="logo m-0 float-start"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
 					<a></a>
 
 

@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/property.png">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.6.0.min.js"></script>
 
-	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	<title>Matdongsan</title>
 	<style type="text/css">
 		#a {
 			float: left;
@@ -72,7 +72,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="APT_search.jsp" class="logo m-0 float-start">Matdongsan</a>
+					<a href="APT_search.jsp" class="logo m-0 float-start"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
 					<a></a>
 
 
