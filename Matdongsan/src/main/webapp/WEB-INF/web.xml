@@ -5,18 +5,6 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>Join</servlet-name>
-  	<display-name>Join</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller.Join</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Login</servlet-name>
-  	<display-name>Login</display-name>
-  	<description></description>
-  	<servlet-class>com.smhrd.controller.Login</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>JoinCon</servlet-name>
   	<display-name>JoinCon</display-name>
   	<description></description>
@@ -28,14 +16,61 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.LoginCon</servlet-class>
   </servlet>
-  <servlet-mapping>
-  	<servlet-name>Join</servlet-name>
-  	<url-pattern>/Join</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Login</servlet-name>
-  	<url-pattern>/Login</url-pattern>
-  </servlet-mapping>
+    <servlet>
+  	<servlet-name>SearchCon</servlet-name>
+  	<display-name>SearchCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.SearchCon</servlet-class>
+  </servlet>
+    <servlet>
+    	<servlet-name>UpdateCon</servlet-name>
+    	<display-name>UpdateCon</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.UpdateCon</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>SelectLand</servlet-name>
+    	<display-name>SelectLand</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.SelectLand</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>SuggestCon</servlet-name>
+    	<display-name>SuggestCon</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.SuggestCon</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>DeleteCon</servlet-name>
+    	<display-name>DeleteCon</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.DeleteCon</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>BookmarkCon</servlet-name>
+    	<display-name>BookmarkCon</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.BookmarkCon</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>DeleteBM</servlet-name>
+    	<display-name>DeleteBM</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.DeleteBM</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>doJoinCon</servlet-name>
+    	<display-name>doJoinCon</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.doJoinCon</servlet-class>
+    </servlet>
+    <servlet>
+    	<servlet-name>doPWCon</servlet-name>
+    	<display-name>doPWCon</display-name>
+    	<description></description>
+    	<servlet-class>com.smhrd.controller.doPWCon</servlet-class>
+    </servlet>
+
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -44,4 +79,42 @@
   	<servlet-name>LoginCon</servlet-name>
   	<url-pattern>/LoginCon</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchCon</servlet-name>
+  	<url-pattern>/SearchCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateCon</servlet-name>
+  	<url-pattern>/UpdateCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SelectLand</servlet-name>
+  	<url-pattern>/SelectLand</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SuggestCon</servlet-name>
+  	<url-pattern>/SuggestCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteCon</servlet-name>
+  	<url-pattern>/DeleteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BookmarkCon</servlet-name>
+  	<url-pattern>/BookmarkCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteBM</servlet-name>
+  	<url-pattern>/DeleteBM</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>doJoinCon</servlet-name>
+  	<url-pattern>/doJoinCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>doPWCon</servlet-name>
+  	<url-pattern>/doPWCon</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>

@@ -1,192 +1,221 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="com.smhrd.domain.LandDTO"%>
+<%@page import="com.smhrd.domain.LandDAO"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page import="java.util.List"%> 
+    
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="Untree.co">
+   <link rel="shortcut icon" href="img/property.png">
 
-  <meta charset="UTF-8">
-  
-<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
-<meta name="apple-mobile-web-app-title" content="CodePen">
+   <meta name="description" content="" />
+   <meta name="keywords" content="bootstrap, bootstrap5" />
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+   <link rel="stylesheet" href="fonts/icomoon/style.css">
+   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
-<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+   <link rel="stylesheet" href="css/tiny-slider.css">
+   <link rel="stylesheet" href="css/aos.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <title>Matdongsan</title>
+
+   <!-- 자동완성 -->
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="./data.js"></script>
+   
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/join.css">
+    
+
+<style type="text/css">
+.tg {
+   border-collapse: collapse;
+   border-spacing: 100;
+   margin-left: 30px;
+    width: 1100px;
+}
+
+.tg td {
+   border-color: #c8d6e5;
+   border-style: solid;
+   border-width: 1px;
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   color: #545454;
+   overflow: hidden;
+   padding: 10px 5px;
+   word-break: normal;
+}
+
+.tg th {
+   border-color: #c8d6e5;
+   border-style: solid;
+   border-width: 1px;
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   font-weight: normal;
+   overflow: hidden;
+   padding: 10px 5px;
+   word-break: normal;
+}
+
+.tg .tg-1vaz {
+   background-color: #E2EFDA;
+   text-align: center;
+   vertical-align: top
+}
 
 
-  <title>CodePen - Pseudo-classes Example</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+.tg .tg-8d8j {
+   text-align: center;
+   vertical-align: bottom
+   display: block;margin: 4px 79px 0 10px;
+   background: rgba(255,255,255,0.98)
+   }
 
-  
-  
-<style>
-body {
-  color: #666;
-  font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-}
-th,
-td {
-  padding: 6px 15px;
-}
-th {
-  background: #42444e;
-  color: #fff;
-  text-align: left;
-}
-tr:first-child th:first-child {
-  border-top-left-radius: 6px;
-}
-tr:first-child th:last-child {
-  border-top-right-radius: 6px;
-}
-td {
-  border-right: 1px solid #c6c9cc;
-  border-bottom: 1px solid #c6c9cc;
-}
-td:first-child {
-  border-left: 1px solid #c6c9cc;
-}
-tr:nth-child(even) td {
-  background: #eaeaed;
-}
-tr:last-child td:first-child {
-  border-bottom-left-radius: 6px;
-}
-tr:last-child td:last-child {
-  border-bottom-right-radius: 6px;
-}
+.tg .tg-8d8j input{
+   width:100% /* 인풋 백그라운드 사이즈 자동 조정 */
+   font-size:15px}
+   
+   /* 인풋 텍스트 컬러 설정 */
+.tg .tg-8d8j input::placeholder {color:#ffffff;}
+
 </style>
 
-  
-  
-  
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-
-
 </head>
+<script>
+      $(function () {   //화면 로딩후 시작
+      $("#searchInput").autocomplete({  //오토 컴플릿트 시작
+         source: List,   // source는 data.js파일 내부의 List 배열
+         focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌   
+            return false;
+         },
+         minLength: 1,// 최소 글자수
+         delay: 100,   //autocomplete 딜레이 시간(ms)
+         //disabled: true, //자동완성 기능 끄기
+      });
+   });
 
-<body translate="no" >
-  <table>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Player</th>
-      <th>Position</th>
-      <th>Height</th>
-      <th>Weight</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>8</td>
-      <td>Marco Belinelli</td>
-      <td>G</td>
-      <td>6-5</td>
-      <td>195</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Carlos Boozer</td>
-      <td>F</td>
-      <td>6-9</td>
-      <td>266</td>
-    </tr>
-    <tr>
-      <td>21</td>
-      <td>Jimmy Butler</td>
-      <td>G-F</td>
-      <td>6-7</td>
-      <td>220</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Luol Deng</td>
-      <td>F</td>
-      <td>6-9</td>
-      <td>220</td>
-    </tr>
-    <tr>
-      <td>22</td>
-      <td>Taj Gibson</td>
-      <td>F</td>
-      <td>6-9</td>
-      <td>225</td>
-    </tr>
-    <tr>
-      <td>32</td>
-      <td>Richard Hamilton</td>
-      <td>G</td>
-      <td>6-7</td>
-      <td>193</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Kirk Hinrich</td>
-      <td>G</td>
-      <td>6-4</td>
-      <td>190</td>
-    </tr>
-    <tr>
-      <td>48</td>
-      <td>Nazr Mohammed</td>
-      <td>C</td>
-      <td>6-10</td>
-      <td>250</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>Joakim Noah</td>
-      <td>C</td>
-      <td>6-11</td>
-      <td>232</td>
-    </tr>
-    <tr>
-      <td>77</td>
-      <td>Vladimir Radmanovic</td>
-      <td>F</td>
-      <td>6-10</td>
-      <td>235</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Nate Robinson</td>
-      <td>G</td>
-      <td>5-9</td>
-      <td>180</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Derrick Rose</td>
-      <td>G</td>
-      <td>6-3</td>
-      <td>190</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>Marquis Teague</td>
-      <td>G</td>
-      <td>6-2</td>
-      <td>190</td>
-    </tr>
-  </tbody>
-</table>
-  
-  
-  
-  
+   
+</script>
+<body>
+      <%
+       String input =(String)session.getAttribute("SearchInput");
+      %>
+      
+      <%      
+         LandDAO dao = new LandDAO();
+   
+         List<LandDTO> Landlist = dao.selectAllLand(input);
+      %>
 
-  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
-</body>
 
-</html>
+   <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+         <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+         </div>                                                              
+      </div>
+      <div class="site-mobile-menu-body"></div>
+   </div>
+
+   <nav class="site-nav">
+      <div class="container">
+         <div class="menu-bg-wrap">
+            <div class="site-navigation">
+               <a href="#" class="logo m-0 float-start">Matdongsan</a>
+               <a></a>
+
+
+               <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+                  <li class="active"><a href="S"></li>
+                  <li><a href="APT_search.jsp">매물검색</a></li>
+                  <li><a href="CalcLand.jsp">부동산계산기</a></li>
+                  <li><a href="Suggestion.jsp">건의사항</a></li>
+                  <li><a href="MyPage.jsp">마이페이지</a></li>
+                  <li><a href="Start.jsp">로그아웃</a></li>
+               </ul>
+
+               <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+                  <span></span>
+               </a>
+
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <div class="hero">
+
+      <div class="hero-slide">
+         <div class="img overlay" style="background-image: url('images/hero_bg_3.jpg')"></div>
+         <div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
+         <div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
+      </div>
+      
+      <!-- 리스트 테이블 -->
+      <div class="container">
+         <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5" style="margin-top:80px; padding-top:115px; width:85%">
+            
+            <h2 class="heading" data-aos="fade-up">검색 결과</h2>
+             
+
+            
+   <!-- 테이블 생성  -->
+   <div >
+      <table class="tg">   
+   
+         <thead>
+            <tr>
+               <th class="tg-1vaz">NUMBER</th>
+               <th class="tg-1vaz" style="width:700px;">NAME</th>
+               <th class="tg-1vaz">ADDRESS</th>
+            </tr>
+         </thead>
+         <tbody>   
+             <%
+            int landnum =0;
+            for(LandDTO L : Landlist){       
+               landnum++;
+            %>                  
+            <tr>
+               <td class="tg-8d8j"><%=landnum %></td>
+               <td class="tg-8d8j" ><a href="SelectLand?aptNo=<%=L.getApt_no()%>" ><%=L.getApt_name() %></a></td>
+               <td class="tg-8d8j"><%=L.getApt_addr()%> <%= L.getApt_addr2() %></td>
+            </tr>
+            <%} %>               
+         </tbody>
+      </table>
+      </div>
+      </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+  </html>

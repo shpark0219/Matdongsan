@@ -1,103 +1,82 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="images/property.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Untree.co">
+<link rel="shortcut icon" href="img/property.png">
 
-	<meta name="description" content="" />
-	<meta name="keywords" content="bootstrap, bootstrap5" />
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="" />
+<meta name="keywords" content="bootstrap, bootstrap5" />
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+	rel="stylesheet">
 
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
-	<title>Matdongsan</title>
+<link rel="stylesheet" href="css/tiny-slider.css">
+<link rel="stylesheet" href="css/aos.css">
+<link rel="stylesheet" href="css/style.css">
 
-	<!-- 자동완성 -->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="./data.js"></script>
-	
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/join.css">
-    
-    <!-- popUp src, css -->
-    <style type="text/css">
-    	#layer_bg {
-			display: none;
-			position: absolute; /* 시작 지점을 버튼 위, 0픽셀부터 시작하려고 주는 것*/
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.5)
-		}
-		
-		#popup {
-			position: absolute;
-			padding: 30px 15px 15px 15px;
-			box-sizing: border-box;
-			border-radius: 15px;
-			width: 600px;
-			height: 400px;
-			background: #fff;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2); /*x y 번짐 색상*/
-		}
-		
-		#popup>h2 {
-			margin-bottom: 25px;
-		}
-		
-		#popup>h2>.btn-close {
-			float: right;			
-		}
-		
-		#lo-ar-name {
-			margin-bottom: 50px;		
-		}
-		
-		.ui-autocomplete {
-		   max-height: 400px;
-		   overflow-y: auto; /* prevent horizontal scrollbar */
-		   overflow-x: hidden; /* add padding to account for vertical scrollbar */
-		   z-index: 1000 !important;
-		}
-    </style>
+<title>Matdongsan</title>
+
+<!-- 자동완성 -->
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./data.js"></script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="css/join.css">
+<style type="text/css">
+#searchInput-autocomplete {
+	height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#searchInput.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+     top: 100%;
+    left: 0;
+    right: 0;
+}
+.ui-autocomplete {     
+      max-height: 400px;     
+      overflow-y: auto;   /* prevent horizontal scrollbar */     
+      overflow-x: hidden; /* add padding to account for vertical scrollbar */    
+       z-index:1000 !important; } 
+
+</style>
 
 </head>
 <script>
-		$(function () {	//화면 로딩후 시작
-		$("#searchInput").autocomplete({  //오토 컴플릿트 시작
-			source: List,	// source는 data.js파일 내부의 List 배열
-			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌	
+	$(function() { //화면 로딩후 시작
+		$("#searchInput").autocomplete({ //오토 컴플릿트 시작
+			source : List, // source는 data.js파일 내부의 List 배열
+			items: 10,
+			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌   
 				return false;
 			},
-			minLength: 1,// 최소 글자수
-			delay: 100,	//autocomplete 딜레이 시간(ms)
-			//disabled: true, //자동완성 기능 끄기
+			minLength : 1,// 최소 글자수
+			delay : 100, //autocomplete 딜레이 시간(ms)
+		//disabled: true, //자동완성 기능 끄기
 		});
 	});
-
-	
 </script>
 <body>
 
@@ -106,7 +85,7 @@
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
 				<span class="icofont-close js-menu-toggle"></span>
-			</div>                                                              
+			</div>
 		</div>
 		<div class="site-mobile-menu-body"></div>
 	</div>
@@ -115,11 +94,11 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="APT_search.jsp" class="logo m-0 float-start"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
-					<a></a>
+					<a href="APT_search.jsp" class="logo m-0 float-start">Matdongsan</a> <a></a>
 
 
-					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+					<ul
+						class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
 						<li class="active"><a href="S"></li>
 						<li><a href="APT_search.jsp">매물검색</a></li>
 						<li><a href="CalcLand.jsp">부동산계산기</a></li>
@@ -128,8 +107,9 @@
 						<li><a href="Start.jsp">로그아웃</a></li>
 					</ul>
 
-					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
-						<span></span>
+					<a href="#"
+						class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+						data-toggle="collapse" data-target="#main-navbar"> <span></span>
 					</a>
 
 				</div>
@@ -246,9 +226,9 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     
-    <!-- popUp function() -->
+     <!-- popUp function() -->
     <script type="text/javascript">
-    $(document).ready(function() {
+   /*  $(document).ready(function() {
     	$("#sbtn1").click(function() {
    		let name=$("#searchInput").val();
     		//console.log(name);
@@ -268,7 +248,7 @@
     		$("input[name='chk_info3']").prop("checked",false); 
     		$("#layer_bg").hide();
     		$("#mask").fadeOut(100);
-    	});
+    	}); */
 
 
     	/* // 팝업 중앙 정렬
@@ -277,8 +257,8 @@
     	var top = ($(window).scrollTop() + ($(window).height() - $layerPopup.height()) / 2 );
     	$layerPopup.css({ "left": left, "top":top, "position": "absolute" });
     	/* $("body").css("position", "relative").append($layerPopup);  */
-    });
-    </script>
+    /* }); */
+    </script> 
     
   </body>
   </html>
