@@ -28,6 +28,8 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 
 <title>Matdongsan</title>
+
+<!-- css -->
 <style>
 #container {
 	overflow: hidden;
@@ -442,32 +444,10 @@
 .table {
 	width: 100%;
 }
+
+
 </style>
-<!-- CSS only -->
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="favicon.png">
-
-<meta name="description" content="" />
-<meta name="keywords" content="bootstrap, bootstrap5" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-	rel="stylesheet">
-
-<link rel="stylesheet" href="fonts/icomoon/style.css">
-<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-<link rel="stylesheet" href="css/tiny-slider.css">
-<link rel="stylesheet" href="css/aos.css">
-<link rel="stylesheet" href="css/style.css">
-
-<title>Property &mdash; Free Bootstrap 5 Website Template by
-	Untree.co</title>
 
 <!-- 자동완성 -->
 <link rel="stylesheet"
@@ -505,8 +485,9 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="menu-bg-wrap">
-				<div class="site-navigation">
+				<div class="site-navigation">					
 					<a href="APT_search.jsp" class="logo m-0 float-start" style="text-decoration: none;"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
+					
 					<a></a>
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
@@ -1353,5 +1334,12 @@
             }; */
         
     	</script>
+    	
+   	<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/navibar.js"></script>
 </html>
 </body>
