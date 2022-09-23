@@ -12,7 +12,7 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="author" content="Untree.co">
-   <link rel="shortcut icon" href="img/property.png">
+   <link rel="shortcut icon" href="favicon.png">
 
    <meta name="description" content="" />
    <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -28,7 +28,7 @@
    <link rel="stylesheet" href="css/aos.css">
    <link rel="stylesheet" href="css/style.css">
 
-   <title>Matdongsan</title>
+   <title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 
    <!-- 자동완성 -->
    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -139,7 +139,7 @@
       <div class="container">
          <div class="menu-bg-wrap">
             <div class="site-navigation">
-               <a href="#" class="logo m-0 float-start">Matdongsan</a>
+               <a href="#" class="logo m-0 float-start"><img src="img/mainlogo.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
                <a></a>
 
 
@@ -149,7 +149,7 @@
                   <li><a href="CalcLand.jsp">부동산계산기</a></li>
                   <li><a href="Suggestion.jsp">건의사항</a></li>
                   <li><a href="MyPage.jsp">마이페이지</a></li>
-                  <li><a href="Start.jsp">로그아웃</a></li>
+                  <li><a href="LogoutCon">로그아웃</a></li>
                </ul>
 
                <a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
@@ -185,8 +185,9 @@
          <thead>
             <tr>
                <th class="tg-1vaz">NUMBER</th>
-               <th class="tg-1vaz" style="width:700px;">NAME</th>
+               <th class="tg-1vaz" style="width:500px;">NAME</th>
                <th class="tg-1vaz">ADDRESS</th>
+               <th class="tg-1vaz">AREA</th>
             </tr>
          </thead>
          <tbody>   
@@ -199,6 +200,7 @@
                <td class="tg-8d8j"><%=landnum %></td>
                <td class="tg-8d8j" ><a href="SelectLand?aptNo=<%=L.getApt_no()%>" ><%=L.getApt_name() %></a></td>
                <td class="tg-8d8j"><%=L.getApt_addr()%> <%= L.getApt_addr2() %></td>
+               <td class="tg-8d8j"><%= L.getApt_area() %></td>
             </tr>
             <%} %>               
          </tbody>

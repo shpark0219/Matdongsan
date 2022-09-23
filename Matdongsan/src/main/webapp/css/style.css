@@ -487,8 +487,8 @@ progress {
     content: "\2014\00A0"; }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto; }
+  width: 100px;
+  height:100px; }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -686,7 +686,8 @@ progress {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 100%; }
+  width: 70%;
+  margin-left: 120px;}
 
 .offset-1 {
   margin-left: 8.33333%; }
@@ -6574,7 +6575,8 @@ textarea.form-control-lg {
   margin-right: auto !important; }
 
 .mb-0 {
-  margin-bottom: 0 !important; }
+	margin-bottom: 1rem
+  }
 
 .mb-1 {
   margin-bottom: 0.25rem !important; }
@@ -6586,7 +6588,8 @@ textarea.form-control-lg {
   margin-bottom: 1rem !important; }
 
 .mb-4 {
-  margin-bottom: 1.5rem !important; }
+  margin-bottom: 3rem !important;
+  margin-top: 3rem !important; }
 
 .mb-5 {
   margin-bottom: 3rem !important; }
@@ -6631,7 +6634,7 @@ textarea.form-control-lg {
   padding: 1.5rem !important; }
 
 .p-5 {
-  padding: 3rem !important; }
+}
 
 .px-0 {
   padding-right: 0 !important;
@@ -9687,12 +9690,15 @@ textarea {
     min-height: 400px; }
   .hero > .container {
     position: relative;
-    z-index: 2; }
+    z-index: 2; 
+    margin-top: 0px;}
   .hero .heading {
     text-shadow: 4px 4px #34495e;
     color: #fff;
     font-size: clamp(1.6rem, 1.6vw, 1.6rem);
-    font-weight: 600; }
+    margin-bottom: 60px;
+    font-weight: 600;
+    margin-top:40px }
   .hero .lead {
     color: #fff;
     font-size: 14px;
@@ -9798,6 +9804,13 @@ textarea {
   .btn.btn-primary {
     background: #005555;
     color: #fff; }
+    
+   .btn.btn-primary2 {
+    background: #005555;
+    color: #fff;
+    border-radius: initial;
+    width: 250px;}
+    
   .btn:hover {
     top: -2px;
     -webkit-box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
@@ -10190,15 +10203,14 @@ textarea {
 .agent-box {
   margin-top: 50px;
   border: 2px solid #efefef;
-  padding: 20px;
-  border-radius: 4px; }
+  padding-left: 20rem;
+  padding-right: 20rem;}
   .agent-box .img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100px;
     flex: 0 0 100px; }
     .agent-box .img img {
-      width: 80px;
-      border-radius: 50%; }
+      width: 80px;}
   .agent-box .text h3, .agent-box .text .h3 {
     font-size: 16px; }
 
@@ -10326,7 +10338,7 @@ nav[aria-label="breadcrumb"] li:before {
   background: #efefef;
   font-size: 14px;
   color: #888;
-  padding:50px 0px 50px 0px;
+  padding:160px 0px 50px 0px;
   }
   .site-footer a {
     color: #777;

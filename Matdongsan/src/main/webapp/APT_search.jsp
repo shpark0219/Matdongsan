@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="img/property.png">
+<link rel="shortcut icon" href="favicon.png">
 
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -25,7 +25,8 @@
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
 
-<title>Matdongsan</title>
+<title>Property &mdash; Free Bootstrap 5 Website Template by
+	Untree.co</title>
 
 <!-- 자동완성 -->
 <link rel="stylesheet"
@@ -80,7 +81,6 @@
 </script>
 <body>
 
-	<!-- 헤더 시작 -->
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
@@ -94,7 +94,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="APT_search.jsp" class="logo m-0 float-start">Matdongsan</a> <a></a>
+					<a href="Start.jsp" class="logo m-0 float-start"><img src="img/mainlogo.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
 
 
 					<ul
@@ -104,7 +104,7 @@
 						<li><a href="CalcLand.jsp">부동산계산기</a></li>
 						<li><a href="Suggestion.jsp">건의사항</a></li>
 						<li><a href="MyPage.jsp">마이페이지</a></li>
-						<li><a href="Start.jsp">로그아웃</a></li>
+						<li><a href="LogoutCon">로그아웃</a></li>
 					</ul>
 
 					<a href="#"
@@ -116,7 +116,6 @@
 			</div>
 		</div>
 	</nav>
-	<!-- 헤더끝 -->
 
 	<div class="hero">
 
@@ -152,113 +151,88 @@
 
 
 	</div>
-	<div style="clear: both;"></div>
-	<br>
-	<br>
-	<br>
-	<br>
-	
-<!-- footer -->
 
+
+<br>
+<br>
 	<div class="site-footer">
 		<div class="container">
-		   
-		   <div class="row">
-			  <div class="col-lg-4">
-				 <div class="widget">
-					<h3>Contact</h3>
-					<address>전라남도 순천시 중앙로 260 5층 스마트인재개발원</address>
-					<ul class="list-unstyled links">
-					   <li><a href="tel://11234567890">061) 123-4567</a></li>
-					   <li><a href="mailto:info@mydomain.com">Matdongsan@gmail.com</a></li>
-					</ul>
-				 </div> <!-- /.widget -->
-			  </div> <!-- /.col-lg-4 -->         
-			  <div class="col-lg-4">
-				 <div class="widget">
-					<h3>Times</h3>
-					<ul class="list-unstyled links">
-					   <li><a href="#">월 ~ 금 9:00 AM - 18:00 PM</a></li>
-					</ul>
-					<ul class="list-unstyled social">
-					   <li><a href="#"><span class="icon-instagram"></span></a></li>
-					   <li><a href="#"><span class="icon-twitter"></span></a></li>
-					   <li><a href="#"><span class="icon-facebook"></span></a></li>
-					   <li><a href="#"><span class="icon-linkedin"></span></a></li>
-					   <li><a href="#"><span class="icon-pinterest"></span></a></li>
-					   <li><a href="#"><span class="icon-dribbble"></span></a></li>
-					</ul>
-				 </div> <!-- /.widget -->
-			  </div> <!-- /.col-lg-4 -->
-		   </div> <!-- /.row -->
-  
-		   <div class="row mt-5">
-			  <div class="col-12 text-center">
-				 <!-- 
-				**==========
-				NOTE: 
-				Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-				**==========
-			  -->
-  
-			  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> <!-- License information: https://untree.co/license/ -->
-			  | 개인정보처리방침 
-			  </p>
-  
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3>Contact</h3>
+						<address>전라남도 순천시 중앙로 260 5층 스마트인재개발원</address>
+						<ul class="list-unstyled links">
+							<li><a href="tel://11234567890">061) 123-4567</a></li>
+							<li><a href="mailto:info@mydomain.com">Matdongsan@gmail.com</a></li>
+						</ul>
+					</div>
+					<!-- /.widget -->
+				</div>
+				<!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3>Times</h3>
+						<ul class="list-unstyled links">
+							<li><a href="#">월 ~ 금 9:00 AM - 18:00 PM</a></li>
+						</ul>
+						<ul class="list-unstyled social">
+							<li><a href="#"><span class="icon-instagram"></span></a></li>
+							<li><a href="#"><span class="icon-twitter"></span></a></li>
+							<li><a href="#"><span class="icon-facebook"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin"></span></a></li>
+							<li><a href="#"><span class="icon-pinterest"></span></a></li>
+							<li><a href="#"><span class="icon-dribbble"></span></a></li>
+						</ul>
+					</div>
+					<!-- /.widget -->
+				</div>
+				<!-- /.col-lg-4 -->
 			</div>
-		  </div>
-		</div> <!-- /.container -->
-	</div> <!-- /.site-footer -->
+			<!-- /.row -->
+
+			<div class="row mt-5">
+				<div class="col-12 text-center">
+					<!-- 
+            **==========
+            NOTE: 
+            Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+            **==========
+           -->
+
+					<p>
+						Copyright &copy;
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						. All Rights Reserved. &mdash; Designed with love by <a
+							href="https://untree.co">Untree.co</a>
+						<!-- License information: https://untree.co/license/ -->
+						| 개인정보처리방침
+					</p>
+
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.site-footer -->
 
 
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-    	<div class="spinner-border" role="status">
-    		<span class="visually-hidden">Loading...</span>
-    	</div>
-    </div>
+	<!-- Preloader -->
+	<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
-    
-     <!-- popUp function() -->
-    <script type="text/javascript">
-   /*  $(document).ready(function() {
-    	$("#sbtn1").click(function() {
-   		let name=$("#searchInput").val();
-    		//console.log(name);
-    		if(!name){
-    			alert('검색할 정보를 입력하세요.');
-    		}else{    			
-    			$('#lo-ar-name').html('<span><h1>'+name+'</h1></span>');
-	    		$("#layer_bg").show();
-	    		$("#mask").fadeIn(100);
-    		}
-    	});
-
-    	$(".btn-close").on('click', function() {
-    		$("#searchInput").val('');
-    		$("input[name='chk_info1']").prop("checked",false); 
-    		$("input[name='chk_info2']").prop("checked",false); 
-    		$("input[name='chk_info3']").prop("checked",false); 
-    		$("#layer_bg").hide();
-    		$("#mask").fadeOut(100);
-    	}); */
-
-
-    	/* // 팝업 중앙 정렬
-    	var $layerPopup = $("#layer_bg");
-    	var left = ($(window).scrollLeft() + ($(window).width() - $layerPopup.width()) / 2);
-    	var top = ($(window).scrollTop() + ($(window).height() - $layerPopup.height()) / 2 );
-    	$layerPopup.css({ "left": left, "top":top, "position": "absolute" });
-    	/* $("body").css("position", "relative").append($layerPopup);  */
-    /* }); */
-    </script> 
-    
-  </body>
-  </html>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/counter.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

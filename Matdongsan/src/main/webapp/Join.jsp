@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="images/property.png">
+<link rel="shortcut icon" href="favicon.png">
 
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -25,7 +25,8 @@
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
 
-<title>Matdongsan</title>
+<title>Property &mdash; Free Bootstrap 5 Website Template by
+	Untree.co</title>
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +36,6 @@
 </head>
 <body>
 
-	<!-- 헤더 시작 -->
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
@@ -49,16 +49,16 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
-					
-						<span></span>
+					<a href="Start.jsp" class="logo m-0 float-start"><img src="img/mainlogo.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a> <a
+						href="#"
+						class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+						data-toggle="collapse" data-target="#main-navbar"> <span></span>
 					</a>
 
 				</div>
 			</div>
 		</div>
 	</nav>
-	<!-- 헤더끝 -->
 
 	<div class="hero">
 
@@ -71,8 +71,7 @@
 			<div class="img overlay"
 				style="background-image: url('images/hero_bg_1.jpg')"></div>
 		</div>
-		<form action="JoinCon" method="POST" class="joinForm"
-			style="text-align: center">
+		<form action="JoinCon" method="POST" class="joinForm" style="text-align: center">
 			<h2>회원정보 입력</h2>
 			<hr style="width: 550px;">
 			<div class="textForm">
@@ -80,23 +79,17 @@
 				</input>
 			</div>
 			<div class="textForm">
-
-				<input name="JoinPw" type="password" class="pw" id="password1"
-					placeholder="비밀번호">
+				<input name="JoinPw" type="password" class="pw" id="password1" placeholder="비밀번호">
 			</div>
 			<div class="textForm">
-
-				<input name="JoinPw2" type="password" class="pw" id="password2"
-					placeholder="비밀번호 확인">
+				<input name="JoinPw2" type="password" class="pw" id="password2"	placeholder="비밀번호 확인">
 			</div>
 			<div class="textForm">
-
 				<input name="JoinEmail" type="text" class="email" placeholder="이메일">
 			</div>
 			<br> 
-			
-			<input type="button" class="btn" value="J O I N" onclick="location.href='Confirm.jsp'"/>			
-       		<input type="button" onClick="location.href='Start.jsp'" class="btn" value="J O I N C A N C L E" style="font-size: inherit;"/>
+			<input type="submit" class="btn" value="J O I N">
+			<input type="button" onClick="location.href='Start.jsp'" class="btn" value="J O I N C A N C L E" style="font-size: inherit;"/>
 		</form>
 
 
@@ -105,7 +98,6 @@
 		<script src="js/aos.js"></script>
 		<script src="js/counter.js"></script>
 		<script src="js/custom.js"></script>
-  </script>
-
+		</script>
 </body>
 </html>

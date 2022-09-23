@@ -25,6 +25,40 @@
     <link rel="stylesheet" href="css/join.css">
 
 	<title>Matdongsan</title>
+
+<style>
+.EventForm{
+	position: absolute;
+	width: 400px;
+	height: 250px;
+	padding: 30px, 20px;
+	background-color: rgba(255, 255, 255, 0.95);
+	text-align: center;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 15px;
+}
+.btn_Ok{
+	position: relative;
+	left: 15%;
+	transform: translateX(-50%);
+	margin-bottom: 50px;
+	width: 30%;
+	height: 40px;
+	background: #005555;
+	background-position: right;
+	background-size: 200%;
+	color: white;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	transition: 0.4s;
+	display: inline;
+	border-radius:inherit;}
+
+</style>
+
 </head>
 <body>
 
@@ -32,36 +66,25 @@
 	<jsp:include page="outerLine/header1.jsp"/>
 	<!-- header 자리 -->
 	
+
 	<div class="hero">
-
-
-		<div class="hero-slide">
-			<div class="img overlay"
-				style="background-image: url('images/hero_bg_3.jpg')"></div>
-			<div class="img overlay"
-				style="background-image: url('images/hero_bg_2.jpg')"></div>
-			<div class="img overlay"
-				style="background-image: url('images/hero_bg_1.jpg')"></div>
-		</div>
-		<form action="doJoin" method="POST" class="joinForm_Login"
+	      <div class="hero-slide">
+         <div class="img overlay" style="background-image: url('images/hero_bg_3.jpg')"></div>
+         <div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
+         <div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
+      </div>
+		<form action="Suggestion.jsp" method="POST" class="EventForm"
 			onsubmit="DoJoinForm__submit(this); return false;"
 			style="text-align: center">
-			<h2>로그인 오류</h2>
-			<hr style="width: 550px;">
-			<div class="fonsize">회원 정보가 일치하지 않습니다. 다시 로그인 하세요.</div>
+			<br><br><br><br>
+			<h6 style="text-align: center" name="#">정상적으로 전송이 완료되었습니다!</h6>
 			<br>
 			<br>
-			<br> <br> <br> <input type="button"
-				onClick="location.href='login.jsp'" class="btn_two"
-				value="L O G I N" /> <input type="button"
-				onClick="location.href='member_search.jsp'" class="btn_three"
-				value="회원정보 찾기" />
+			<br> <input type="button"
+				onClick="location.href='Suggestion.jsp'" class="btn_Ok"
+				value="OK" />
 		</form>
-
-		</div>
-		
-		<div style="clear:both;"></div>
-	
+	</div>
 
 		<!-- footer 자리 -->
 		<jsp:include page="outerLine/footer.jsp"/>

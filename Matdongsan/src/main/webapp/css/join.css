@@ -50,6 +50,23 @@ body {
 	text-align: center;
 	margin: 30px;
 }
+.joinForm_search{
+   position: absolute;
+   width: 500px;
+   height: 700px;
+   padding: 30px, 20px;
+   background-color: rgba(255, 255, 255, 0.95);
+   text-align: center;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 15px;
+}
+
+.joinForm_search h2{
+   text-align: center;
+   margin: 30px;
+}
 
 .joinForm_check {
 	position: absolute;
@@ -77,7 +94,6 @@ body {
 .textForm {
 	border-bottom: 2px solid #adadad;
 	margin: 40px;
-	padding: 10px 10px;
 }
 
 .id {
@@ -143,6 +159,7 @@ body {
 	cursor: pointer;
 	transition: 0.4s;
 	display: inline;
+	border-radius:inherit;
 }
 
 .btn_three {
@@ -161,6 +178,7 @@ body {
 	cursor: pointer;
 	transition: 0.4s;
 	display: inline;
+	border-radius:inherit;
 }
 
 .btn:hover {

@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="images/property.png">
+	<link rel="shortcut icon" href="favicon.png">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<title>Matdongsan</title>
+	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,30 +33,9 @@
 </head>
 <body>
 
-	<!-- 헤더 시작 -->
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
-
-	<nav class="site-nav">
-		<div class="container">
-			<div class="menu-bg-wrap">
-				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
-					
-						<span></span>
-					</a>
-
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!-- 헤더끝 -->
+	<!-- header 자리 -->
+	<jsp:include page="outerLine/header1.jsp"/>
+	<!-- header 자리 -->
 
 	<div class="hero">
 
@@ -74,7 +53,6 @@
         <div class="textForm" >
           
           <input name="LoginId" type="text" class="id" placeholder="아이디">
-          </input>
         </div>
         <div class="textForm">
            
@@ -85,6 +63,14 @@
         <input type="submit" class="btn" value="L O G I N" />
         <input type="button" onClick="location.href='Start.jsp'" class="btn" value="L O G I N C A N C L E" style="font-size: inherit;"/>
       </form>
+     </div>
+      
+      <div style="clear:both;"></div>
+	
+
+	<!-- footer 자리 -->
+	<jsp:include page="outerLine/footer.jsp"/>
+	<!-- footer 자리 -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

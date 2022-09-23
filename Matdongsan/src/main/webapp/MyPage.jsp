@@ -3,16 +3,15 @@
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.domain.MemberDAO"%>
 <%@page import="com.smhrd.domain.Member"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="images/property.png">
+	<link rel="shortcut icon" href="favicon.png">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -31,48 +30,46 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.6.0.min.js"></script>
 
-	<title>Matdongsan</title>
+	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 	<style type="text/css">
-		#a {
-			float: left;
-			margin-right: 10px;
-			width: 50%;			
-		}
-		
-		#b {
-			float: right;
-			width: 45%;
-			margin: auto; 
-			
-		}
-		
-		.col-12.mb-3{
-			box-sizing: content-box;
-		}
-		
-		#c1 {
-			margin-top: 10%;
-			display: inline;
-		}
-		
-		#c2 {
-			margin-top: 10%;
-			display: inline;
-		}		
-		
-	</style>
+      #a {
+         float: left;
+         margin-right: 10px;
+         width: 50%;         
+      }
+      
+      #b {
+         float: right;
+         width: 40%;
+         margin: auto; 
+         
+      }
+      
+      .col-12.mb-3{
+         box-sizing: content-box;
+      }
+      
+      #c1 {
+         margin-top: 10%;
+         display: inline;
+      }
+      
+      #c2 {
+         margin-top: 10%;
+         display: inline;
+      }      
+      
+   </style>
 </head>
 <body>
 	<%
 		Member loginMember = (Member)session.getAttribute("loginMember");
 	%>
-
-	<!-- 헤더 시작 -->
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
 				<span class="icofont-close js-menu-toggle"></span>
-			</div>                                                              
+			</div>
 		</div>
 		<div class="site-mobile-menu-body"></div>
 	</div>
@@ -81,18 +78,15 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="APT_search.jsp" class="logo m-0 float-start"><img src="images/property2.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
-					<a></a>
-
+					<a href="#" class="logo m-0 float-start">Matdongsan</a>
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-						<li class="active"><a href="S"></li>
+						
 						<li><a href="APT_search.jsp">매물검색</a></li>
 						<li><a href="CalcLand.jsp">부동산계산기</a></li>
 						<li><a href="Suggestion.jsp">건의사항</a></li>
 						<li><a href="MyPage.jsp">마이페이지</a></li>
 						<li><a href="Start.jsp">로그아웃</a></li>
-					</ul>
 
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
@@ -102,7 +96,6 @@
 			</div>
 		</div>
 	</nav>
-	<!-- 헤더끝 -->
 
 	<div class="hero page-inner overlay" style="background-image: url('images/hero_bg_1.jpg');">
 
@@ -117,13 +110,11 @@
 
     <div class="d-block agent-box p-5" style="text-align: center; margin-top:0px;">
         <div class="img mb-4" >
-            <img src="images/person_2-min.jpg" alt="Image" class="img-fluid">
+            <img src="images/person_7-min.png" alt="Image" class="img-fluid">
         </div>
         <div class="text">
-            <h3 class="mb-0" name="id"><%= loginMember.getUser_id() %></h3>
-            
-            <div class="meta mb-3" name="email"><%= loginMember.getUser_email() %></div>
-            <p><%= loginMember.getUser_email() %>님의 마이페이지 입니다.</p>
+            <h3 class="mb-0" name="id" style="font-size:18pt"><%= loginMember.getUser_id() %></h3>
+            <p style="font-size:13pt"><%= loginMember.getUser_id()%>님의 마이페이지 입니다.</p>
         </div>
     </div>
 
@@ -131,10 +122,12 @@
     <br>
     <br>
     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    	<p style="text-align:left; font-size:25px; margin-left:250px; color:black; "><strong> 회원 정보 수정</strong></p>
+    	<br>
         <form action="UpdateCon" method="post">
             <div class="row" id="a">
                 <div class="col-12 mb-3">
-                    <input type="text" class="form-control" name="UpdatePw" placeholder="비밀번호 변경">
+                    <input type="password" class="form-control" name="UpdatePw" placeholder="비밀번호 변경">
                 </div>
                 <br>
                 <div class="col-12 mb-3">
@@ -145,25 +138,41 @@
                 </div> -->
                 
                 <div class="col-12" style="text-align: center; padding-top:30px;">
-                    <input type="submit" value="회원정보 수정" class="btn btn-primary">
+                    <input type="submit" value="수정" class="btn btn-primary">
                 </div>
 
             </div>
-        </form>
             
-		<div class="row" id="b">
-		         <div class="col-12" style="text-align: center;">
+        </form>
+        	<!-- <table>
+        		<tr>
+        			<td id="b">
+        				<span ><input type="submit" value="내 건의사항 목록" id="c"
+		               class="btn btn-primary2" onclick="lookBtn()"
+		               style="margin-top: 0px;"></span>
+        			</td>
+        			<td id="b">
+        				<span><input type="submit" value="검색한 아파트 목록" id="c2"
+		               class="btn btn-primary2" onclick="look()"></span>
+        			</td>
+        		</tr>
+        	</table>  -->
+        	
+        	
+		 <div class="row" id="b">
+		         <div class="col-12" style="text-align: center; margin-left:30px;">
 		            <span><input type="submit" value="내 건의사항 목록" id="c"
-		               class="btn btn-primary" onclick="lookBtn()"
+		               class="btn btn-primary2" onclick="lookBtn()"
 		               style="margin-top: 0px;"></span>
 		         </div>
-		      </div>
-		      <div class="row" id="b">
-		         <div class="col-12" style="text-align: center;">
+		 </div>
+		      
+		  <div class="row" id="b">
+		         <div class="col-12" style="text-align: center; margin-left:30px;">
 		            <span><input type="submit" value="검색한 아파트 목록" id="c2"
-		               class="btn btn-primary" onclick="look()"></span>
+		               class="btn btn-primary2" onclick="look()"></span>
 		         </div>
-		      </div>
+		  </div>
             
     </div>
     <div style="clear:both;"></div>
@@ -177,7 +186,9 @@
    
     <div class="d-block agent-box p-5"  id="d"  style="display: none !important;">    
     	<table class="table" >
-    	<h2>건의사항 목록</h2>
+    	<br><br>
+    	<h2 style="text-align:center; font-size:25px;">건의사항 목록</h2>
+    	<br>
 		  <thead>
 		    <tr>
 		      <th scope="col">Number</th>
@@ -209,6 +220,7 @@
       <div style="text-align: center;">
           <button type="button" class="btn btn-primary" id="closeBtn1">닫기</button>
        </div>
+       <br><br>
     </div>     
     
     <div style="clear:both;"></div>
@@ -216,7 +228,9 @@
 	<br>>
     <div class="d-block agent-box p-5"  id="d2"  style="display: none !important;">    
     	<table class="table" >
-    	<h2>즐겨찾기 목록</h2>
+    	<br><br>
+    	<h2 style="text-align:center; font-size:25px;">즐겨찾기 목록</h2>
+    	<br>
 		  <thead>
 		    <tr>
 		      <th scope="col">Number</th>
@@ -248,15 +262,9 @@
       <div style="text-align: center;">
           <button type="button" class="btn btn-primary" id="closeBtn2">닫기</button>
        </div>
+       <br><br>
     </div>
-    
-    
-    <div style="clear:both;"></div>
-	<br>
-	<br>
-
-
-	<!-- footer -->
+	
 
 	<div class="site-footer">
 		<div class="container">
@@ -316,7 +324,11 @@
     		<span class="visually-hidden">Loading...</span>
     	</div>
     </div>
-
+	<script type="text/javascript">
+	function look(){
+		$('#d2').css('display','block');
+	};
+	</script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
@@ -325,14 +337,7 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/esc.js"></script>
-    
-    <script type="text/javascript">
-	function look(){
-		$('#d2').css('display','block');
-	};
-	</script>
-    
-   <script type="text/javascript">
+     <script type="text/javascript">
       $('#closeBtn1').on('click', function() {
          $('#d').attr('style', 'display:none !important');
       });
@@ -341,6 +346,5 @@
           $('#d2').attr('style', 'display:none !important');
        });
    </script>
-   
   </body>
   </html>

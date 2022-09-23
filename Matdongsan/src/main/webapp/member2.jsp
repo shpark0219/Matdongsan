@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Untree.co">
-	<link rel="shortcut icon" href="img/property.png">
+	<link rel="shortcut icon" href="favicon.png">
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<title>Matdongsan</title>
+	<title>Property &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
 
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +47,7 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start">Matdongsan</a>
+					<a href="Start.jsp" class="logo m-0 float-start"><img src="img/mainlogo.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a>
 					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
@@ -65,7 +65,7 @@
 			<div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
 			<div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
 		</div>
-		<form action="doJoin" method="POST" class="joinForm" onsubmit="DoJoinForm__submit(this); return false;"
+		<form action="doJoin" method="POST" class="joinForm_search" onsubmit="DoJoinForm__submit(this); return false;"
     style="text-align:center">                                                                                     
         <h2>회원정보</h2>
         <hr style="width: 550px;">
@@ -77,25 +77,21 @@
           
           <input name="loginId" type="text" class="id" placeholder="아이디">
           <h3><%= member.getUser_id() %></h3>
-          <input name="loginId" type="text" class="id" placeholder="test123">
-          </input>
         </div>
         <div class="textForm">
            
            <input name="loginPwConfirm" type="password" class="pw" placeholder="비밀번호">
            <h3><%= member.getUser_pw() %></h3>
-           <input name="loginPwConfirm" type="password" class="pw" placeholder="123456">
         </div>
          <div class="textForm">
            
           <input name="email" type="text" class="email" placeholder="이메일">
           <h3><%= member.getUser_email() %></h3>
-          <input name="email" type="text" class="email" placeholder="test123@gmail.com">
         </div>
        <br>
        <br>
        
-        <input type="button" class="btn" value="L O G I N" onClick="location.href='login.jsp'" style="top:30px"/>
+        <input type="button" class="btn" value="L O G I N" onClick="location.href='login.jsp'" style="top:20px"/>
       </form>
 
 

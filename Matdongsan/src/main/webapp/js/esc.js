@@ -23,7 +23,6 @@ $('#submit').on('click', function() {
 });
 
 
-
 // console.log(table);
 // let table2 = $('.h5').text(); 
 // console.log(table2);        
