@@ -3,62 +3,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="favicon.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="img/pageTap.png">
 
-<meta name="description" content="" />
-<meta name="keywords" content="bootstrap, bootstrap5" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-	rel="stylesheet">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/join.css">
 
-<link rel="stylesheet" href="fonts/icomoon/style.css">
-<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+<title>Matdongsan</title>
 
-<link rel="stylesheet" href="css/tiny-slider.css">
-<link rel="stylesheet" href="css/aos.css">
-<link rel="stylesheet" href="css/style.css">
-
-<title>Property &mdash; Free Bootstrap 5 Website Template by
-	Untree.co</title>
-
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" href="css/join.css">
 </head>
 <body>
 
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close">
-				<span class="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
-
-	<nav class="site-nav">
-		<div class="container">
-			<div class="menu-bg-wrap">
-				<div class="site-navigation">
-					<a href="Start.jsp" class="logo m-0 float-start"><img src="img/mainlogo.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan</a> <a
-						href="#"
-						class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-						data-toggle="collapse" data-target="#main-navbar"> <span></span>
-					</a>
-
-				</div>
-			</div>
-		</div>
-	</nav>
+	<!-- header 자리 -->
+	<jsp:include page="outerLine/header1.jsp" />
+	<!-- header 자리 -->
 
 	<div class="hero">
 
@@ -71,7 +44,8 @@
 			<div class="img overlay"
 				style="background-image: url('images/hero_bg_1.jpg')"></div>
 		</div>
-		<form action="JoinCon" method="POST" class="joinForm" style="text-align: center">
+		<form action="JoinCon" method="POST" class="joinForm"
+			style="text-align: center">
 			<h2>회원정보 입력</h2>
 			<hr style="width: 550px;">
 			<div class="textForm">
@@ -79,25 +53,44 @@
 				</input>
 			</div>
 			<div class="textForm">
-				<input name="JoinPw" type="password" class="pw" id="password1" placeholder="비밀번호">
+				<input name="JoinPw" type="password" class="pw" id="password1"
+					placeholder="비밀번호">
 			</div>
 			<div class="textForm">
-				<input name="JoinPw2" type="password" class="pw" id="password2"	placeholder="비밀번호 확인">
+				<input name="JoinPw2" type="password" class="pw" id="password2"
+					placeholder="비밀번호 확인">
 			</div>
 			<div class="textForm">
 				<input name="JoinEmail" type="text" class="email" placeholder="이메일">
 			</div>
-			<br> 
-			<input type="submit" class="btn" value="J O I N">
-			<input type="button" onClick="location.href='Start.jsp'" class="btn" value="J O I N C A N C L E" style="font-size: inherit;"/>
+			<br> <input type="submit" class="btn" value="J O I N"> <input
+				type="button" onClick="location.href='Start.jsp'" class="btn"
+				value="C A N C L E" style="font-size: inherit;" />
 		</form>
+	</div>
+	<br>
+	<br>
+
+	<div style="clear:both;"></div>
 
 
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/tiny-slider.js"></script>
-		<script src="js/aos.js"></script>
-		<script src="js/counter.js"></script>
-		<script src="js/custom.js"></script>
-		</script>
+	<!-- footer 자리 -->
+	<jsp:include page="outerLine/footer.jsp"/>
+	<!-- footer 자리 -->
+
+	 <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+       <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+       </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
 </body>
 </html>

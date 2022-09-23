@@ -58,6 +58,8 @@
 			</div>
 		</div>
 	</div>
+	
+    
  	<div style="clear:both;"></div>
 
 
@@ -65,8 +67,13 @@
 	<jsp:include page="outerLine/footer.jsp"/>
 	<!-- footer 자리 -->
 
-
-
+	 <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+       <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+       </div>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

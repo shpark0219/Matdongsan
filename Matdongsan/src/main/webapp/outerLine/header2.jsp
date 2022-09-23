@@ -23,10 +23,9 @@
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
 					<a href="APT_search.jsp" class="logo m-0 float-start">
-					<img src="images/property2.png" style="width: 30px; height: 30px;">Matdongsan
+					<img src="img/mainlogo.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Matdongsan
 					</a> 
 					<a></a>
-
 
 					<ul
 						class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
