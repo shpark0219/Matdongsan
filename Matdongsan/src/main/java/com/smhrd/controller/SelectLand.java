@@ -63,8 +63,7 @@ public class SelectLand extends HttpServlet {
             int tp_count_2021 = 0;
             
             TPDTO TPnull = new TPDTO(tp_no, tp_name, tp_addr, tp_addr2, tp_area, tp_price_2019,tp_count_2019,tp_price_2020,tp_count_2020,tp_price_2021,tp_count_2021);
-            session.setAttribute("selectTP", TPnull);            
-           
+            session.setAttribute("selectTP", TPnull);
          }
       
       }else {

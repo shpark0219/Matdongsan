@@ -42,7 +42,7 @@ public class SuggestCon extends HttpServlet {
 		
 		// 6. 명령 후 처리
 		if(cnt>0) {
-			response.sendRedirect("Suggestion.jsp");
+			response.sendRedirect("event.jsp");
 			
 //			request.setAttribute("JoinInfo", member);
 //			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");

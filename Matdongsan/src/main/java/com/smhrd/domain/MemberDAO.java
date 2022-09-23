@@ -45,7 +45,7 @@ public class MemberDAO {
 				sqlSession.rollback();
 			}
 		} finally {
-			sqlSession.close();
+//			sqlSession.close();
 		} // finally 끝
 		return loginMember;
 	}// 로그인 끝
@@ -61,7 +61,7 @@ public class MemberDAO {
 				sqlSession.rollback();
 			}
 		} finally {
-			sqlSession.close();
+//			sqlSession.close();
 		} // finally 끝
 		return cnt;
 	}// 회원수정 끝
@@ -78,7 +78,7 @@ public class MemberDAO {
 				sqlSession.rollback();
 			} // cnt 판단 끝
 		} finally {
-//			sqlSession.close();
+			sqlSession.close();
 		}
 		return doJoin;
 	}
@@ -95,7 +95,7 @@ public class MemberDAO {
 				sqlSession.rollback();
 			} // cnt 판단 끝
 		} finally {
-//			sqlSession.close();
+			sqlSession.close();
 		}
 		return doPW;
 	}
