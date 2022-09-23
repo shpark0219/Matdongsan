@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Untree.co">
-<link rel="shortcut icon" href="favicon.png">
+<link rel="shortcut icon" href="img/pageTap.png">
 
 <meta name="description" content="" />
 <meta name="keywords" content="bootstrap, bootstrap5" />
@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="css/tiny-slider.css">
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
+
+<title>Matdongsan</title>
 
 <style type="text/css">
 .tg {
